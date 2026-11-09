@@ -1,0 +1,50 @@
+{
+  "api": {
+    "baseUrl": "https://data.enseignementsup-recherche.gouv.fr",
+    "endpoint": "/api/explore/v2.1/catalog/datasets/{datasetId}/records",
+    "timeoutMs": 15000
+  },
+  "dataset": {
+    "id": "fr-esr-parcoursup",
+    "name": "Parcoursup - Vœux d'affectation et admissions",
+    "description": "Données ouvertes du Ministère de l'Enseignement Supérieur et de la Recherche (MESR)"
+  },
+  "query": {
+    "searchField": "*",
+    "searchTerm": "immobilières",
+    "whereClause": "search(*,\"immobilières\")",
+    "limit": 100,
+    "order_by": "voe_tot desc",
+    "session": "2024",
+    "filiere": "BTS",
+    "formationLibelle": "BTS - Services - Professions immobilières"
+  },
+  "urls": {
+    "portalBase": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/",
+    "portalQueryParam": "flg=fr-fr&disjunctive.fili&refine.fili=BTS",
+    "tableBase": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/{datasetId}/table/",
+    "parcoursupFicheBase": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation"
+  },
+  "fieldsMapping": {
+    "uai": "cod_uai",
+    "etablissement": "g_ea_lib_vx",
+    "ville": "ville_etab",
+    "academie": "acad_nom",
+    "departement": "dep_lib",
+    "codePostal": "dep",
+    "session": "session",
+    "contratEtab": "contrat_etab",
+    "filiere": "fili",
+    "formationDetail": "form_lib_voe_acc",
+    "capacite": "capa_fin",
+    "voeuxTotaux": "voe_tot",
+    "voeuxPhasePrincipale": "nb_voe_pp",
+    "admisDebutPhasePrincipale": "acc_debutpp",
+    "pctAdmisDebutPP": "pct_acc_debutpp",
+    "totalAdmis": "acc_tot",
+    "tauxAcces": "taux_acces_ens",
+    "rangDernierAppele": "ran_grp1",
+    "codeFormationPsup": "g_ta_cod",
+    "lienFichePsup": "lien_form_psup"
+  }
+}

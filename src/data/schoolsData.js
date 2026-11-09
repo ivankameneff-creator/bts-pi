@@ -5,7 +5,8 @@
 // 2. Classement Thotis Media :
 //    https://thotismedia.com/classement-thotis-des-bts-pi-professions-immobilieres/
 
-export const PARCOURSUP_SOURCE_URL = 'https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?flg=fr-fr&disjunctive.fili';
+import { PARCOURSUP_SOURCE_URL, PARCOURSUP_CONFIG } from '../config/parcoursupConfig';
+export { PARCOURSUP_SOURCE_URL, PARCOURSUP_CONFIG };
 export const THOTIS_SOURCE_URL = 'https://thotismedia.com/classement-thotis-des-bts-pi-professions-immobilieres/';
 
 export const ACADEMIES = [
