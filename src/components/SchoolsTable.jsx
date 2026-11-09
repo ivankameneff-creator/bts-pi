@@ -43,6 +43,12 @@ export function SchoolsTable({
       return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
     }
 
+    if (sortField === 'parcoursup_voeuxPremierePlace') {
+      const aVal = a.parcoursup?.voeuxPremierePlace != null ? a.parcoursup.voeuxPremierePlace : -1;
+      const bVal = b.parcoursup?.voeuxPremierePlace != null ? b.parcoursup.voeuxPremierePlace : -1;
+      return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+    }
+
     if (sortField === 'parcoursup_tauxAcces') {
       const aVal = a.parcoursup?.tauxAcces != null ? a.parcoursup.tauxAcces : 999;
       const bVal = b.parcoursup?.tauxAcces != null ? b.parcoursup.tauxAcces : 999;
@@ -107,15 +113,15 @@ export function SchoolsTable({
               >
                 <div className="flex items-center gap-1.5">
                   <TrendingUp className="w-3.5 h-3.5 text-cyan-400" />
-                  <span>Parcoursup (Vœux / Pris)</span>
+                  <span>Parcoursup Open Data (Vœux / 1er Choix)</span>
                   {renderSortArrow('parcoursup_demandes')}
                   <a
                     href={PARCOURSUP_SOURCE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors p-0.5"
-                    title="Consulter les données officielles Parcoursup Open Data (nouvel onglet)"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors p-0.5 ml-0.5"
+                    title="Consulter le portail officiel data.enseignementsup-recherche.gouv.fr (nouvel onglet)"
                   >
                     <ExternalLink className="w-3 h-3" />
                   </a>
@@ -216,30 +222,42 @@ export function SchoolsTable({
                     </span>
                   </td>
 
-                  {/* Parcoursup (Demandes / Pris) */}
+                  {/* Parcoursup (Demandes / 1er Choix / Pris) */}
                   <td className="py-3 px-3 whitespace-nowrap">
                     {school.parcoursup?.surParcoursup ? (
                       <a
-                        href={PARCOURSUP_SOURCE_URL}
+                        href={school.parcoursup.openDataUrl || school.parcoursup.openDataSearchUrl || PARCOURSUP_SOURCE_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-2 font-bold text-cyan-300 text-xs px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-colors"
-                        title={`Capacité : ${school.parcoursup.places} places • Taux d'accès : ${school.parcoursup.tauxAcces}%`}
+                        className="inline-flex flex-col gap-1 font-bold text-cyan-300 text-xs px-3 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-colors group/cell"
+                        title={`Données officielles Ministère Open Data (Code UAI: ${school.parcoursup.uai || 'N/C'})\n${school.parcoursup.demandes.toLocaleString()} vœux totaux • ${school.parcoursup.voeuxPremierePlace ?? 0} admis en 1er choix (J1)\nCapacité : ${school.parcoursup.places} places • Taux d'accès : ${school.parcoursup.tauxAcces}%\nCliquer pour vérifier la source officielle`}
                       >
-                        <span>{school.parcoursup.demandes.toLocaleString()} vœux / {school.parcoursup.pris} admis</span>
-                        <span className="text-[10px] text-cyan-400 font-extrabold bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/30">
-                          {school.parcoursup.tauxAcces}%
-                        </span>
-                        <ExternalLink className="w-2.5 h-2.5 opacity-60" />
+                        <div className="flex items-center gap-2">
+                          <span>{school.parcoursup.demandes.toLocaleString()} vœux</span>
+                          <span className="text-[10px] text-cyan-400 font-extrabold bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/30">
+                            {school.parcoursup.tauxAcces}% accès
+                          </span>
+                          <ExternalLink className="w-2.5 h-2.5 opacity-50 group-hover/cell:opacity-100 transition-opacity ml-auto" />
+                        </div>
+                        <div className="text-[10px] font-semibold text-amber-300/95 flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                          <span>{school.parcoursup.voeuxPremierePlace ?? 0} en 1er choix (J1)</span>
+                          <span className="text-slate-500 font-normal">({school.parcoursup.pris} admis)</span>
+                        </div>
                       </a>
                     ) : (
-                      <span 
-                        className="inline-block text-[11px] text-slate-400 font-medium px-2.5 py-1 rounded-xl bg-slate-900 border border-slate-800"
-                        title="Admission directe sur dossier et entretien (hors Parcoursup)"
+                      <a 
+                        href={school.parcoursup?.openDataSearchUrl || PARCOURSUP_SOURCE_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1.5 text-[11px] text-slate-400 font-medium px-2.5 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:text-cyan-300 hover:border-slate-700 transition-colors"
+                        title="Admission directe sur dossier et entretien (hors Parcoursup) - Vérifier sur l'annuaire Open Data"
                       >
-                        ⚡ Admission directe
-                      </span>
+                        <span>⚡ Admission directe</span>
+                        <ExternalLink className="w-2.5 h-2.5 opacity-40" />
+                      </a>
                     )}
                   </td>
 

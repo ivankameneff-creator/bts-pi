@@ -101,24 +101,30 @@ export function SchoolCard({
           {/* Parcoursup official data badge */}
           {school.parcoursup?.surParcoursup ? (
             <a
-              href={PARCOURSUP_SOURCE_URL}
+              href={school.parcoursup.openDataUrl || school.parcoursup.openDataSearchUrl || PARCOURSUP_SOURCE_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 backdrop-blur-md flex items-center gap-1.5 hover:bg-cyan-500/30 hover:border-cyan-400 transition-colors group/psup"
-              title="Données officielles Parcoursup : vœux formulés et admis (data.enseignementsup-recherche.gouv.fr)"
+              title={`Données officielles Ministère Open Data (UAI : ${school.parcoursup.uai || 'N/C'})\n${school.parcoursup.demandes.toLocaleString()} vœux totaux • ${school.parcoursup.voeuxPremierePlace ?? 0} admis en 1er choix (J1)\nCliquer pour vérifier sur data.enseignementsup-recherche.gouv.fr`}
             >
               <TrendingUp className="w-3 h-3 text-cyan-400" />
-              <span>{school.parcoursup.demandes.toLocaleString()} vœux • {school.parcoursup.pris} admis</span>
+              <span>{school.parcoursup.demandes.toLocaleString()} vœux</span>
+              <span className="text-amber-300 font-extrabold">• {school.parcoursup.voeuxPremierePlace ?? 0} en 1er choix</span>
               <ExternalLink className="w-2.5 h-2.5 text-cyan-300 opacity-60 group-hover/psup:opacity-100 transition-opacity" />
             </a>
           ) : (
-            <span 
-              className="px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-900/80 text-slate-400 border border-slate-700/70 backdrop-blur-md flex items-center gap-1"
-              title="Admission directe sur dossier et entretien"
+            <a
+              href={school.parcoursup?.openDataSearchUrl || PARCOURSUP_SOURCE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-900/80 text-slate-400 border border-slate-700/70 backdrop-blur-md flex items-center gap-1 hover:text-cyan-300 hover:border-cyan-500/40 transition-colors"
+              title="Admission directe sur dossier et entretien (hors Parcoursup) - Vérifier sur l'annuaire Open Data"
             >
               <span>⚡ Admission directe</span>
-            </span>
+              <ExternalLink className="w-2.5 h-2.5 opacity-40" />
+            </a>
           )}
 
           {/* Alternance badge */}
@@ -221,12 +227,27 @@ export function SchoolCard({
 
           {school.parcoursup?.surParcoursup && (
             <div className="flex items-center justify-between gap-2 pt-1.5 border-t border-slate-800/80">
-              <span className="text-slate-400 flex items-center gap-1 shrink-0 text-[11px]">
-                <TrendingUp className="w-3.5 h-3.5 text-cyan-400" /> Taux d'accès :
-              </span>
-              <span className="font-bold text-cyan-300">
-                {school.parcoursup.tauxAcces}% ({school.parcoursup.places} places)
-              </span>
+              <a
+                href={school.parcoursup.openDataUrl || school.parcoursup.openDataSearchUrl || PARCOURSUP_SOURCE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="text-slate-400 hover:text-cyan-300 transition-colors flex items-center gap-1 shrink-0 text-[11px]"
+                title={`Vérifier la fiche source Open Data (UAI : ${school.parcoursup.uai || 'N/C'})`}
+              >
+                <TrendingUp className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Open Data :</span>
+                <ExternalLink className="w-2.5 h-2.5 opacity-60" />
+              </a>
+              <div className="flex items-center gap-1.5 text-right text-xs">
+                <span className="font-bold text-cyan-300">
+                  {school.parcoursup.tauxAcces}% accès
+                </span>
+                <span className="text-slate-600">•</span>
+                <span className="font-bold text-amber-300 text-[11px]" title="Candidats admis dès le 1er jour ayant validé ce vœu en choix prioritaire N°1">
+                  {school.parcoursup.voeuxPremierePlace ?? 0} en 1er choix
+                </span>
+              </div>
             </div>
           )}
         </div>
