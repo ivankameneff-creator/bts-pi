@@ -522,7 +522,7 @@ export const SCHOOLS_DATA = [
     "academie": "Toulouse",
     "ville": "Toulouse",
     "codePostal": "31300",
-    "adresse": "4 Rue de Jouanet, 31300 Toulouse",
+    "adresse": "11 Rue du 11 Novembre 1918, 31300 Toulouse",
     "coordinates": [
       43.5934,
       1.4182
@@ -555,7 +555,7 @@ export const SCHOOLS_DATA = [
     "tauxElearning": 15,
     "datePortesOuvertes": "Samedi 14 Novembre 2026 de 10h00 à 17h00",
     "prochaineJPO": "2026-11-14",
-    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://www.ecoles-vidal.fr/sites/default/files/inline-images/VIDAL-3.jpg",
     "description": "Institution toulousaine fondée en 1928 située près des Arènes, l'École Vidal est un acteur historique de l'alternance immobilière avec plus de 900 entreprises régionales partenaires.",
     "atouts": [
       "Plus de 90 ans d'expertise",
@@ -564,8 +564,8 @@ export const SCHOOLS_DATA = [
       "Ateliers logiciels métiers"
     ],
     "contacts": {
-      "telephone": "05 61 76 56 56",
-      "email": "admissions@ecoles-vidal.fr",
+      "telephone": "05 61 61 51 51",
+      "email": "contact@ecole-vidal.fr",
       "siteWeb": "https://www.ecoles-vidal.fr"
     },
     "avis": {
