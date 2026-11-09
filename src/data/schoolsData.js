@@ -417,8 +417,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=IMSI%20Toulouse%20-%20Institut%20du%20Management%20des%20Services%20Immobiliers"
     },
     "tauxElearning": 25,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 10h00 à 16h30",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 10h00 à 17h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     "description": "École 100% dédiée à l'immobilier du Groupe IGENSIA Education (Campus René Cassin). Elle forme des négociateurs, gestionnaires de patrimoine et syndics en prise directe avec les agences de la métropole.",
     "atouts": [
@@ -444,7 +444,7 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.imsi-formation.com/evenements/jpo",
+    "sourceJpoUrl": "https://www.imsi-ecoles.com/ecole/nous-rencontrer#JPO",
     "sourceJpoNom": "Agenda JPO officiel IMSI"
   },
   {
@@ -485,8 +485,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESARC%20%C3%89volution%20Toulouse%20(Lab%C3%A8ge)"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 21 Février 2026 de 9h30 à 16h00",
-    "prochaineJPO": "2026-02-21",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 9h30 à 16h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
     "description": "Implantée au cœur de la technopole Enova Labège, l'ESARC Toulouse est spécialiste de la préparation au BTS PI avec un suivi individualisé et un vaste réseau d'agences partenaires.",
     "atouts": [
@@ -512,8 +512,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.esarc-evolution.fr/journees-portes-ouvertes",
-    "sourceJpoNom": "Agenda JPO officiel ESARC"
+    "sourceJpoUrl": "https://www.esarc-evolution.fr/portes-ouvertes-bts",
+    "sourceJpoNom": "Portes Ouvertes BTS ESARC Évolution"
   },
   {
     "id": "ecoles-vidal-toulouse",
@@ -553,8 +553,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=%C3%89coles%20Vidal%20Toulouse"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 28 Février 2026 de 9h30 à 17h00",
-    "prochaineJPO": "2026-02-28",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 10h00 à 17h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
     "description": "Institution toulousaine fondée en 1928 située près des Arènes, l'École Vidal est un acteur historique de l'alternance immobilière avec plus de 900 entreprises régionales partenaires.",
     "atouts": [
@@ -580,8 +580,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.ecoles-vidal.fr/jpo/",
-    "sourceJpoNom": "Portail JPO officiel Écoles Vidal"
+    "sourceJpoUrl": "https://www.ecoles-vidal.fr/actualites/journee-portes-ouvertes-samedi-14-novembre",
+    "sourceJpoNom": "Page officielle JPO Écoles Vidal"
   },
   {
     "id": "espi-toulouse",
@@ -621,8 +621,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESPI%20Toulouse%20-%20%C3%89cole%20Sup%C3%A9rieure%20des%20Professions%20Immobili%C3%A8res"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 10h00 à 16h30",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
     "description": "Campus toulousain de la référence nationale de l'enseignement immobilier. L'ESPI allie une pédagogie d'experts professionnels avec un réseau alumni puissant de plus de 12 000 cadres en France.",
     "atouts": [
@@ -648,8 +648,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.groupe-espi.fr/agenda/",
-    "sourceJpoNom": "Portail JPO & Réunions ESPI"
+    "sourceJpoUrl": "https://groupe-espi.fr",
+    "sourceJpoNom": "Portail JPO officiel Groupe ESPI"
   },
   {
     "id": "efab-toulouse",
@@ -689,8 +689,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=EFAB%20Toulouse%20-%20%C3%89cole%20Sup%C3%A9rieure%20de%20l'Immobilier"
     },
     "tauxElearning": 25,
-    "datePortesOuvertes": "Samedi 7 Mars 2026 de 10h00 à 16h00",
-    "prochaineJPO": "2026-03-07",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     "description": "Membre du réseau Grandes Écoles de l'Immobilier, l'EFAB Toulouse prépare au BTS PI avec un accent fort mis sur les outils digitaux, les visites virtuelles et la négociation augmentée.",
     "atouts": [
@@ -716,7 +716,7 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.efab.fr/journees-portes-ouvertes",
+    "sourceJpoUrl": "https://www.efab.fr/portes-ouvertes/",
     "sourceJpoNom": "Agenda JPO officiel EFAB"
   },
   {
@@ -893,8 +893,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=Purple%20Campus%20Castres%20-%20CCI%20Occitanie"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 28 Février 2026 de 9h00 à 13h00",
-    "prochaineJPO": "2026-02-28",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 9h00 à 13h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=1200&q=80",
     "description": "Centre de formation consulaire de la Chambre de Commerce et d'Industrie du Tarn, Purple Campus Castres offre une immersion 100% professionnelle en alternance dans les cabinets et agences du Tarn et de l'Occitanie.",
     "atouts": [
@@ -920,8 +920,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.purple-campus.com/agenda/",
-    "sourceJpoNom": "Agenda JPO Purple Campus CCI"
+    "sourceJpoUrl": "https://www.purple-campus.com/evenements/",
+    "sourceJpoNom": "Agenda Événements & JPO Purple Campus CCI"
   },
   {
     "id": "occitanie-business-school-albi",
@@ -1029,8 +1029,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ISTEF%20Toulouse%20-%20Institut%20Sup%C3%A9rieur%20Tertiaire"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 9h30 à 16h00",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 9h00 à 13h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
     "description": "Implanté dans le quartier Montaudran, l'ISTEF dispose d'un pôle immobilier reconnu avec des formateurs juristes, agents immobiliers et gestionnaires de copropriété.",
     "atouts": [
@@ -1511,8 +1511,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESPI%20Paris%20-%20%C3%89cole%20Sup%C3%A9rieure%20des%20Professions%20Immobili%C3%A8res"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 10h00 à 17h00",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 10h00 à 17h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
     "description": "Pionnière de l'enseignement immobilier depuis 1972, l'ESPI forme des négociateurs, gestionnaires locatifs et syndics de haut vol. Réseau de plus de 4 000 entreprises partenaires dans toute l'Île-de-France.",
     "atouts": [
@@ -1544,8 +1544,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.groupe-espi.fr/agenda/",
-    "sourceJpoNom": "Portail JPO & Réunions ESPI"
+    "sourceJpoUrl": "https://groupe-espi.fr",
+    "sourceJpoNom": "Portail JPO officiel Groupe ESPI"
   },
   {
     "id": "imsi-paris",
@@ -1585,8 +1585,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=IMSI%20Paris%20-%20Institut%20du%20Management%20des%20Services%20Immobiliers"
     },
     "tauxElearning": 25,
-    "datePortesOuvertes": "Mercredi 25 Février 2026 de 14h00 à 18h00",
-    "prochaineJPO": "2026-02-25",
+    "datePortesOuvertes": "Samedi 28 Novembre 2026 de 10h00 à 17h00",
+    "prochaineJPO": "2026-11-28",
     "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     "description": "L'IMSI est l'école de référence du Groupe IGENSIA Education dédiée au management de l'immobilier. Formation orientée transaction commerciale, gestion de patrimoine et property management.",
     "atouts": [
@@ -1612,7 +1612,7 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.imsi-formation.com/evenements/jpo",
+    "sourceJpoUrl": "https://www.imsi-ecoles.com/ecole/nous-rencontrer#JPO",
     "sourceJpoNom": "Agenda JPO officiel IMSI"
   },
   {
@@ -1653,8 +1653,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=EFAB%20Paris%20-%20%C3%89cole%20Sup%C3%A9rieure%20de%20l'Immobilier"
     },
     "tauxElearning": 30,
-    "datePortesOuvertes": "Samedi 7 Mars 2026 de 10h00 à 17h00",
-    "prochaineJPO": "2026-03-07",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 10h00 à 16h30",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     "description": "Membre du Réseau Grandes Écoles d'Immobilier, l'EFAB forme aux métiers de la négociation, du property management et de la promotion immobilière avec des outils de visite virtuelle 3D.",
     "atouts": [
@@ -1680,7 +1680,7 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.efab.fr/journees-portes-ouvertes",
+    "sourceJpoUrl": "https://www.efab.fr/portes-ouvertes/",
     "sourceJpoNom": "Agenda JPO officiel EFAB"
   },
   {
@@ -2265,8 +2265,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESPI%20Bordeaux%20-%20Bassins%20%C3%A0%20Flot"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 24 Janvier 2026 de 10h00 à 17h00",
-    "prochaineJPO": "2026-01-24",
+    "datePortesOuvertes": "Samedi 28 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-28",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     "description": "Fondée par les organisations professionnelles de l'immobilier (FNAIM, UNIS, FPI), l'ESPI Bordeaux est implantée dans le quartier moderne des Bassins à Flot. Réseau d'entreprises partenaires inégalé en Aquitaine.",
     "atouts": [
@@ -2292,8 +2292,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.groupe-espi.fr/campus/bordeaux/",
-    "sourceJpoNom": "Agenda Campus ESPI Bordeaux"
+    "sourceJpoUrl": "https://groupe-espi.fr",
+    "sourceJpoNom": "Portail JPO officiel Groupe ESPI Bordeaux"
   },
   {
     "id": "esarc-evolution-bordeaux",
@@ -2333,8 +2333,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESARC%20%C3%89volution%20Bordeaux%20M%C3%A9rignac"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 21 Février 2026 de 10h00 à 16h00",
-    "prochaineJPO": "2026-02-21",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 9h30 à 16h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     "description": "L'école des BTS par excellence en Gironde. L'ESARC propose un encadrement resserré et un centre de carrières qui place plus de 90% des alternants.",
     "atouts": [
@@ -2360,8 +2360,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.esarc-evolution.fr/journees-portes-ouvertes",
-    "sourceJpoNom": "Agenda JPO officiel ESARC"
+    "sourceJpoUrl": "https://www.esarc-evolution.fr/portes-ouvertes-bts",
+    "sourceJpoNom": "Portes Ouvertes BTS ESARC Évolution"
   },
   {
     "id": "suptertiaire-bordeaux",
@@ -2401,8 +2401,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=Suptertiaire%20Immobilier%20Bordeaux%20Chartrons"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 10h00 à 16h30",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
     "description": "École nationale spécialisée à 100% dans les métiers de l'immobilier. Située sur les magnifiques quais des Chartrons à Bordeaux, elle met l'accent sur la transaction de prestige et la gestion locative.",
     "atouts": [
@@ -2428,8 +2428,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.suptertiaire.com/jpo",
-    "sourceJpoNom": "Portail JPO Suptertiaire"
+    "sourceJpoUrl": "https://www.mutimo.com/",
+    "sourceJpoNom": "Portail officiel Suptertiaire / Mutimo"
   },
   {
     "id": "efab-bordeaux",
@@ -2469,8 +2469,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=EFAB%20Bordeaux%20Euratlantique"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 28 Février 2026 de 10h00 à 15h00",
-    "prochaineJPO": "2026-02-28",
+    "datePortesOuvertes": "Samedi 28 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-28",
     "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
     "description": "L'EFAB Bordeaux s'intègre au cœur du grand projet urbain Bordeaux Euratlantique. Formations immobilières du BTS au Bac+5 orientées vers le property management et la transition énergétique des bâtiments.",
     "atouts": [
@@ -2496,7 +2496,7 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.efab.fr/journees-portes-ouvertes",
+    "sourceJpoUrl": "https://www.efab.fr/portes-ouvertes/",
     "sourceJpoNom": "Agenda JPO officiel EFAB"
   },
   {
@@ -2537,8 +2537,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=IMSI%20Bordeaux%20-%20Institut%20du%20Management%20Immobilier"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 7 Février 2026 de 10h00 à 17h00",
-    "prochaineJPO": "2026-02-07",
+    "datePortesOuvertes": "Samedi 28 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-28",
     "image": "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80",
     "description": "Membre du Groupe IGS, l'IMSI forme des professionnels de haut niveau en gestion d'actifs, administration de biens et transaction. Accompagnement individualisé vers l'alternance.",
     "atouts": [
@@ -2564,7 +2564,7 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.imsi-formation.com/evenements/jpo",
+    "sourceJpoUrl": "https://www.imsi-ecoles.com/ecole/nous-rencontrer#JPO",
     "sourceJpoNom": "Agenda JPO officiel IMSI"
   },
   {
@@ -2605,8 +2605,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=TALIS%20Business%20School%20Bordeaux%20Lac"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 9h30 à 13h30",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 9h30 à 16h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
     "description": "Implanté à Bordeaux Lac, Talis est un acteur majeur de la formation par alternance en Nouvelle-Aquitaine avec un pôle immobilier très actif.",
     "atouts": [
@@ -2632,8 +2632,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.talis-bs.com/evenements",
-    "sourceJpoNom": "Événements & JPO TALIS BS"
+    "sourceJpoUrl": "https://www.talis.community",
+    "sourceJpoNom": "Portail officiel Talis Business School"
   },
   {
     "id": "lycee-francis-jammes-orthez",
@@ -2809,8 +2809,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=EDUKA%20Bayonne%20-%20%C3%89cole%20de%20l'Immobilier%20Pays%20Basque"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 21 Février 2026 de 10h00 à 16h00",
-    "prochaineJPO": "2026-02-21",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 9h30 à 16h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
     "description": "École implantée au cœur du bassin BAB (Biarritz-Anglet-Bayonne), spécialisée dans l'immobilier résidentiel haut de gamme de la côte basque et la gestion locative saisonnière.",
     "atouts": [
@@ -2877,8 +2877,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=TALIS%20Campus%20Bayonne%20BAB"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 9h30 à 13h00",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 9h30 à 16h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
     "description": "Campus dynamique à Bayonne Marouette proposant le BTS PI en contrat d'apprentissage ou professionnalisation, avec poursuite en Bachelor Gestionnaire d'Actifs Immobiliers.",
     "atouts": [
@@ -2904,8 +2904,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.talis-bs.com/evenements",
-    "sourceJpoNom": "Événements & JPO TALIS BS"
+    "sourceJpoUrl": "https://www.talis.community",
+    "sourceJpoNom": "Portail officiel Talis Business School"
   },
   {
     "id": "campus-ermitage-agen",
@@ -3013,8 +3013,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=TALIS%20Campus%20P%C3%A9rigueux%20Dordogne"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 7 Mars 2026 de 9h30 à 13h00",
-    "prochaineJPO": "2026-03-07",
+    "datePortesOuvertes": "Samedi 28 Novembre 2026 de 9h30 à 16h00",
+    "prochaineJPO": "2026-11-28",
     "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     "description": "Campus de proximité au centre de Périgueux, préparant au BTS PI en apprentissage au contact direct du marché immobilier périgourdin (belles demeures, gîtes, résidences secondaires).",
     "atouts": [
@@ -3040,8 +3040,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.talis-bs.com/evenements",
-    "sourceJpoNom": "Événements & JPO TALIS BS"
+    "sourceJpoUrl": "https://www.talis.community",
+    "sourceJpoNom": "Portail officiel Talis Business School"
   },
   {
     "id": "cfa-landes-dax",
@@ -3217,8 +3217,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=Pigier%20Performance%20Nantes"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 28 Février 2026 de 9h30 à 16h00",
-    "prochaineJPO": "2026-02-28",
+    "datePortesOuvertes": "Samedi 14 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-14",
     "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
     "description": "Acteur historique de la formation en alternance dans les Pays de la Loire, Pigier Nantes bénéficie d'un très fort ancrage auprès des cabinets de syndic et agences nantaises.",
     "atouts": [
@@ -3245,7 +3245,7 @@ export const SCHOOLS_DATA = [
       ]
     },
     "sourceJpoUrl": "https://www.pigier.com/evenements",
-    "sourceJpoNom": "Événements & JPO Pigier"
+    "sourceJpoNom": "Événements & JPO Pigier Nantes"
   },
   {
     "id": "lycee-pasteur-lille",
@@ -3353,8 +3353,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESUP%20Rennes%20-%20L'%C3%89co-%C3%89cole%20de%20Commerce%20%26%20Immobilier"
     },
     "tauxElearning": 20,
-    "datePortesOuvertes": "Samedi 28 Février 2026 de 10h00 à 17h00",
-    "prochaineJPO": "2026-02-28",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
     "description": "Établissement breton réputé, l'ESUP Rennes accompagne les alternants vers la maîtrise des transactions résidentielles et des baux commerciaux en Ille-et-Vilaine.",
     "atouts": [
@@ -3380,8 +3380,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.esup-rennes.fr/evenements",
-    "sourceJpoNom": "Agenda & JPO ESUP"
+    "sourceJpoUrl": "https://www.esup.fr/portes-ouvertes/",
+    "sourceJpoNom": "Portes Ouvertes ESUP Rennes"
   },
   {
     "id": "lycee-philippe-lamour-nimes",
@@ -3557,8 +3557,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESPI%20Montpellier%20-%20Port%20Marianne"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 24 Janvier 2026 de 10h00 à 17h00",
-    "prochaineJPO": "2026-01-24",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     "description": "Le campus montpelliérain de l'ESPI, fondé par les professionnels du secteur immobilier (FNAIM, UNIS). Idéalement situé dans le quartier d'affaires Port Marianne, il offre un réseau exceptionnel de cabinets et promoteurs.",
     "atouts": [
@@ -3584,8 +3584,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.groupe-espi.fr/campus/montpellier/",
-    "sourceJpoNom": "Agenda Campus ESPI Montpellier"
+    "sourceJpoUrl": "https://groupe-espi.fr",
+    "sourceJpoNom": "Portail JPO officiel Groupe ESPI Montpellier"
   },
   {
     "id": "esicad-montpellier",
@@ -3625,8 +3625,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=ESICAD%20Montpellier%20Le%20Mill%C3%A9naire"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 14 Février 2026 de 9h30 à 16h00",
-    "prochaineJPO": "2026-02-14",
+    "datePortesOuvertes": "Samedi 28 Novembre 2026 de 10h00 à 16h00",
+    "prochaineJPO": "2026-11-28",
     "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     "description": "École historique de commerce et de gestion à Montpellier. Le pôle immobilier prépare au BTS PI depuis plus de 25 ans avec un encadrement réputé et des coachings carrières personnalisés.",
     "atouts": [
@@ -3653,7 +3653,7 @@ export const SCHOOLS_DATA = [
       ]
     },
     "sourceJpoUrl": "https://www.esicad.com/evenements",
-    "sourceJpoNom": "Agenda officiel JPO ESICAD"
+    "sourceJpoNom": "Agenda officiel JPO ESICAD Montpellier"
   },
   {
     "id": "idelca-business-school-montpellier",
@@ -3788,8 +3788,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.efficom-montpellier.fr/evenements",
-    "sourceJpoNom": "Agenda officiel Efficom / ECLA"
+    "sourceJpoUrl": "https://www.efficom-montpellier.fr",
+    "sourceJpoNom": "Site officiel Campus Efficom / ECLA Montpellier"
   },
   {
     "id": "purple-campus-beziers",
@@ -3829,8 +3829,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=Purple%20Campus%20B%C3%A9ziers%20-%20CCI%20Occitanie"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 28 Février 2026 de 9h00 à 13h00",
-    "prochaineJPO": "2026-02-28",
+    "datePortesOuvertes": "Samedi 21 Novembre 2026 de 9h00 à 13h00",
+    "prochaineJPO": "2026-11-21",
     "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
     "description": "Centre de formation par alternance de la Chambre de Commerce et d'Industrie de l'Hérault. Idéalement implanté pour les agences du biterrois, du Cap d'Agde et du Val d'Hérault.",
     "atouts": [
@@ -3856,8 +3856,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.purple-campus.com/agenda/",
-    "sourceJpoNom": "Agenda JPO Purple Campus CCI"
+    "sourceJpoUrl": "https://www.purple-campus.com/evenements/",
+    "sourceJpoNom": "Agenda Événements & JPO Purple Campus CCI"
   },
   {
     "id": "purple-campus-perpignan",
@@ -3897,8 +3897,8 @@ export const SCHOOLS_DATA = [
       "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=Purple%20Campus%20Perpignan%20Roussillon"
     },
     "tauxElearning": 15,
-    "datePortesOuvertes": "Samedi 14 Mars 2026 de 9h00 à 13h00",
-    "prochaineJPO": "2026-03-14",
+    "datePortesOuvertes": "Samedi 28 Novembre 2026 de 9h00 à 13h00",
+    "prochaineJPO": "2026-11-28",
     "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
     "description": "Le pôle consulaire d'apprentissage des Pyrénées-Orientales, adossé à la CCI Roussillon. Forme de nombreux négociateurs et gestionnaires pour les agences de la plaine du Roussillon.",
     "atouts": [
@@ -3924,8 +3924,8 @@ export const SCHOOLS_DATA = [
         }
       ]
     },
-    "sourceJpoUrl": "https://www.purple-campus.com/agenda/",
-    "sourceJpoNom": "Agenda JPO Purple Campus CCI"
+    "sourceJpoUrl": "https://www.purple-campus.com/evenements/",
+    "sourceJpoNom": "Agenda Événements & JPO Purple Campus CCI"
   },
   {
     "id": "icfa-carcassonne",
