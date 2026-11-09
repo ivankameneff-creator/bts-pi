@@ -9,9 +9,12 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "update:parcoursup": "node scripts/fetch_parcoursup.mjs",
-    "enrich:jpo": "node scripts/enrich_jpo.mjs"
+    "enrich:jpo": "node scripts/enrich_jpo.mjs",
+    "db:export": "node scripts/export_to_sql.mjs",
+    "db:seed": "node scripts/seed_supabase.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "leaflet": "^1.9.4",

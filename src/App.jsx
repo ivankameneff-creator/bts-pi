@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { SCHOOLS_DATA, ACADEMIES, PARCOURSUP_SOURCE_URL, THOTIS_SOURCE_URL } from './data/schoolsData';
+import { getInitialSchools, fetchSchoolsFromDatabase, saveNewSchool } from './services/schoolsService';
 import { Navbar } from './components/Navbar';
 import { InteractiveMap } from './components/InteractiveMap';
 import { SchoolCard } from './components/SchoolCard';
@@ -35,20 +36,20 @@ import {
 
 export default function App() {
   // Database State with smart merge of built-in schools and custom added ones
-  const [schools, setSchools] = useState(() => {
-    try {
-      const savedCustom = localStorage.getItem('bts_pi_custom_schools');
-      if (savedCustom) {
-        const customSchools = JSON.parse(savedCustom);
-        if (Array.isArray(customSchools) && customSchools.length > 0) {
-          return [...customSchools, ...SCHOOLS_DATA];
-        }
+  const [schools, setSchools] = useState(() => getInitialSchools());
+  const [dataSource, setDataSource] = useState('static'); // 'static' | 'supabase'
+
+  // Fetch distant schools from database in background
+  useEffect(() => {
+    let isMounted = true;
+    fetchSchoolsFromDatabase().then(res => {
+      if (isMounted && res && res.schools) {
+        setSchools(res.schools);
+        setDataSource(res.source);
       }
-    } catch (e) {
-      console.error(e);
-    }
-    return SCHOOLS_DATA;
-  });
+    });
+    return () => { isMounted = false; };
+  }, []);
 
   // Favorites state
   const [favorites, setFavorites] = useState(() => {
@@ -96,13 +97,8 @@ export default function App() {
   const clearFavorites = () => setFavorites([]);
 
   const handleAddSchool = (newSchool) => {
-    const updated = [newSchool, ...schools];
-    setSchools(updated);
-    try {
-      const savedCustom = localStorage.getItem('bts_pi_custom_schools');
-      const existing = savedCustom ? JSON.parse(savedCustom) : [];
-      localStorage.setItem('bts_pi_custom_schools', JSON.stringify([newSchool, ...existing]));
-    } catch (e) {}
+    saveNewSchool(newSchool);
+    setSchools(prev => [newSchool, ...prev.filter(s => s.id !== newSchool.id)]);
   };
 
   // Filter & Search Logic
