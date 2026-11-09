@@ -18,10 +18,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Étape 1 : Construction de l'application
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout du code
@@ -50,6 +48,14 @@ jobs:
         with:
           path: './dist'
 
+  # Étape 2 : Déploiement sur GitHub Pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Déploiement sur GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
