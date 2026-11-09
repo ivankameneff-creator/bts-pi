@@ -122,3 +122,56 @@
   outline: 2px solid #10b981;
   outline-offset: 2px;
 }
+
+/* Custom MapLibre Globe 3D dark popup & controls styling */
+.maplibregl-popup-content {
+  background: #080d1a !important;
+  color: #e2e8f0 !important;
+  border-radius: 1.25rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 25px rgba(16, 185, 129, 0.2) !important;
+  padding: 0.75rem !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: #080d1a !important;
+  border-bottom-color: #080d1a !important;
+}
+
+.maplibregl-popup-close-button {
+  color: #94a3b8 !important;
+  font-size: 1.25rem !important;
+  padding: 0.25rem 0.5rem !important;
+  right: 0.5rem !important;
+  top: 0.5rem !important;
+  border-radius: 9999px !important;
+  transition: all 0.2s !important;
+}
+
+.maplibregl-popup-close-button:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.maplibregl-ctrl-group {
+  background: rgba(8, 13, 26, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.maplibregl-ctrl-group button {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.maplibregl-ctrl-group button:last-child {
+  border-bottom: none !important;
+}
+
+.maplibregl-ctrl-icon {
+  filter: invert(1) brightness(1.2) !important;
+}
