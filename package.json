@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "update:parcoursup": "node scripts/fetch_parcoursup.mjs"
+    "update:parcoursup": "node scripts/fetch_parcoursup.mjs",
+    "enrich:jpo": "node scripts/enrich_jpo.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

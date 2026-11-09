@@ -254,9 +254,24 @@ export function SchoolCard({
 
         {/* Date JPO if available */}
         {school.datePortesOuvertes && (
-          <div className="flex items-center gap-2 text-xs text-amber-300/90 font-semibold bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-xl">
-            <Calendar className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-            <span className="line-clamp-1">JPO : {school.datePortesOuvertes}</span>
+          <div className="flex items-center justify-between gap-2 text-xs text-amber-300/90 font-semibold bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-xl">
+            <div className="flex items-center gap-2 min-w-0">
+              <Calendar className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span className="truncate">JPO : {school.datePortesOuvertes}</span>
+            </div>
+            {school.sourceJpoUrl && (
+              <a
+                href={school.sourceJpoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                title={`Vérifier la date JPO sur la source officielle : ${school.sourceJpoNom || 'Lien officiel'}`}
+                className="inline-flex items-center gap-1 text-[11px] text-amber-300 hover:text-white underline underline-offset-2 shrink-0 ml-1 font-bold"
+              >
+                <span>Source</span>
+                <ExternalLink className="w-2.5 h-2.5" />
+              </a>
+            )}
           </div>
         )}
 

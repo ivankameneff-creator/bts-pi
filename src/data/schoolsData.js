@@ -227,7 +227,9 @@ export const SCHOOLS_DATA = [
           "texte": "Cadre historique magnifique, émulation saine et très bon suivi des périodes de stage."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://ozenne.mon-ent-occitanie.fr",
+    "sourceJpoNom": "Site officiel Lycée Public Théodore Ozenne"
   },
   {
     "id": "lycee-henri-matisse-cugnaux",
@@ -299,7 +301,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et lycée moderne, accès facile en bus depuis Basso Cambo."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4220&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-saliege-balma",
@@ -371,7 +375,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le campus est superbe et les professeurs sont extrêmement impliqués."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=20220&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "imsi-toulouse",
@@ -437,7 +443,9 @@ export const SCHOOLS_DATA = [
           "texte": "Trouvé mon alternance chez Foncia grâce au Career Center de l'IMSI dès le mois de mai !"
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.imsi-formation.com/evenements/jpo",
+    "sourceJpoNom": "Agenda JPO officiel IMSI"
   },
   {
     "id": "esarc-evolution-toulouse",
@@ -503,7 +511,9 @@ export const SCHOOLS_DATA = [
           "texte": "Bonne école, équipe pédagogique à l'écoute et bon rythme en alternance."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.esarc-evolution.fr/journees-portes-ouvertes",
+    "sourceJpoNom": "Agenda JPO officiel ESARC"
   },
   {
     "id": "ecoles-vidal-toulouse",
@@ -569,7 +579,9 @@ export const SCHOOLS_DATA = [
           "texte": "École sérieuse qui m'a permis de signer chez Nexity dès juillet. Je recommande !"
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.ecoles-vidal.fr/jpo/",
+    "sourceJpoNom": "Portail JPO officiel Écoles Vidal"
   },
   {
     "id": "espi-toulouse",
@@ -635,7 +647,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le réseau de l'ESPI est imbattable dans le Sud-Ouest. Intervenants tous professionnels en exercice."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.groupe-espi.fr/agenda/",
+    "sourceJpoNom": "Portail JPO & Réunions ESPI"
   },
   {
     "id": "efab-toulouse",
@@ -701,7 +715,9 @@ export const SCHOOLS_DATA = [
           "texte": "Bonne école et bonne ambiance. Les ateliers d'entraînement aux oraux sont très formateurs."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.efab.fr/journees-portes-ouvertes",
+    "sourceJpoNom": "Agenda JPO officiel EFAB"
   },
   {
     "id": "lycee-skhole-dart-montauban",
@@ -767,7 +783,9 @@ export const SCHOOLS_DATA = [
           "texte": "Petite promo donc les profs nous connaissent tous très bien. Stage trouvé chez Guy Hoquet Montauban sans problème."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=38385&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-marie-curie-tarbes",
@@ -833,7 +851,9 @@ export const SCHOOLS_DATA = [
           "texte": "Super formation publique. Très bonne ambiance et cadre au pied des montagnes."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://marie-curie.mon-ent-occitanie.fr",
+    "sourceJpoNom": "Site officiel Lycée Public Marie Curie Tarbes"
   },
   {
     "id": "purple-campus-castres",
@@ -899,7 +919,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le réseau de la CCI nous aide énormément à trouver une agence dans le 81."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.purple-campus.com/agenda/",
+    "sourceJpoNom": "Agenda JPO Purple Campus CCI"
   },
   {
     "id": "occitanie-business-school-albi",
@@ -965,7 +987,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très contente de faire mon BTS à Albi sans avoir à monter à Toulouse tous les jours."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.occitanie-business-school.fr",
+    "sourceJpoNom": "Site officiel Occitanie Business School Albi"
   },
   {
     "id": "istef-toulouse",
@@ -1031,7 +1055,9 @@ export const SCHOOLS_DATA = [
           "texte": "Formateurs très professionnels et disponibles pour les révisions du BTS."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.istef.fr",
+    "sourceJpoNom": "Site officiel ISTEF Toulouse"
   },
   {
     "id": "institut-rousseau-toulouse",
@@ -1097,7 +1123,9 @@ export const SCHOOLS_DATA = [
           "texte": "Bonne formation, les profs nous poussent à comprendre la fiscalité et le droit."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.institut-rousseau.fr",
+    "sourceJpoNom": "Site officiel Institut Rousseau Toulouse"
   },
   {
     "id": "lycee-ort-maurice-grynfogel-colomiers",
@@ -1163,7 +1191,9 @@ export const SCHOOLS_DATA = [
           "texte": "Excellents profs, encadrement sérieux et suivi très professionnel."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://toulouse.ort.asso.fr",
+    "sourceJpoNom": "Site officiel Lycée Privé & CFA ORT Maurice Grynfogel"
   },
   {
     "id": "lycee-pardailhan-auch",
@@ -1229,7 +1259,9 @@ export const SCHOOLS_DATA = [
           "texte": "Superbe encadrement familial et professeurs très disponibles. Stages faciles à trouver dans le Gers."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://pardailhan.mon-ent-occitanie.fr",
+    "sourceJpoNom": "Site officiel Lycée Polyvalent Public Pardailhan Auch"
   },
   {
     "id": "lycee-monteil-rodez",
@@ -1295,7 +1327,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bonne expérience, les cours de droit et de gestion de copropriété sont de grande qualité."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://monteil.mon-ent-occitanie.fr",
+    "sourceJpoNom": "Site officiel Lycée Polyvalent Public Alexis Monteil Rodez"
   },
   {
     "id": "lycee-clement-marot-cahors",
@@ -1361,7 +1395,9 @@ export const SCHOOLS_DATA = [
           "texte": "Une promo à taille humaine où les professeurs prennent vraiment le temps de nous former."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=25344&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-enc-bessieres-paris",
@@ -1433,7 +1469,9 @@ export const SCHOOLS_DATA = [
           "texte": "Excellents professeurs de droit et transaction, très haut niveau."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9156&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "espi-paris",
@@ -1505,7 +1543,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le rythme 2j/3j permet de bien s'intégrer en agence. Suivi pédagogique au top."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.groupe-espi.fr/agenda/",
+    "sourceJpoNom": "Portail JPO & Réunions ESPI"
   },
   {
     "id": "imsi-paris",
@@ -1571,7 +1611,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le rythme 1 sem/1 sem est idéal pour gérer de vrais dossiers de vente du mandat jusqu'au compromis."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.imsi-formation.com/evenements/jpo",
+    "sourceJpoNom": "Agenda JPO officiel IMSI"
   },
   {
     "id": "efab-paris",
@@ -1637,7 +1679,9 @@ export const SCHOOLS_DATA = [
           "texte": "J'ai appris à utiliser les vrais logiciels d'agence dès le premier mois. Très professionnalisant !"
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.efab.fr/journees-portes-ouvertes",
+    "sourceJpoNom": "Agenda JPO officiel EFAB"
   },
   {
     "id": "lycee-saint-jean-de-passy-paris",
@@ -1703,7 +1747,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le meilleur tremplin académique pour ensuite intégrer un Master en gestion de patrimoine ou promotion."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9379&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-paul-painleve-courbevoie",
@@ -1769,7 +1815,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bon encadrement public, pas de frais de scolarité et une rigueur qui fait la différence le jour de l'examen."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11117&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-marcelin-berthelot-pantien",
@@ -1835,7 +1883,9 @@ export const SCHOOLS_DATA = [
           "texte": "Beaucoup d'écoute et de bienveillance. Les profs font tout pour notre réussite."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11187&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "sciences-u-lyon",
@@ -1901,7 +1951,9 @@ export const SCHOOLS_DATA = [
           "texte": "Les projets tuteurés sont géniaux : on a monté un vrai dossier de gestion locative de A à Z."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=26524&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-monge-chambery",
@@ -1967,7 +2019,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le top pour travailler en agence de montagne à Courchevel, Val Thorens ou Annecy !"
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=35116&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-fernand-daguin-merignac",
@@ -2033,7 +2087,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le meilleur lycée public pour le BTS PI en Gironde. Des profs exigeants et investis."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4366&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-gustave-eiffel-bordeaux",
@@ -2099,7 +2155,9 @@ export const SCHOOLS_DATA = [
           "texte": "Qualité d'enseignement irréprochable. L'équipe enseignante nous pousse à donner le meilleur."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.eiffel-bordeaux.org",
+    "sourceJpoNom": "Site officiel Lycée Public Gustave Eiffel Bordeaux"
   },
   {
     "id": "lycee-victor-louis-talence",
@@ -2165,7 +2223,9 @@ export const SCHOOLS_DATA = [
           "texte": "Parcours très formateur avec une vraie mise en pratique en gestion de copropriété."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://lyceevictorlouis.net",
+    "sourceJpoNom": "Site officiel Lycée Public Victor Louis / Greta Talence"
   },
   {
     "id": "espi-bordeaux",
@@ -2231,7 +2291,9 @@ export const SCHOOLS_DATA = [
           "texte": "L'école de référence absolue dans l'immobilier à Bordeaux. Mon alternance m'a permis de signer un CDI avant même les résultats."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.groupe-espi.fr/campus/bordeaux/",
+    "sourceJpoNom": "Agenda Campus ESPI Bordeaux"
   },
   {
     "id": "esarc-evolution-bordeaux",
@@ -2297,7 +2359,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bonne école avec un vrai suivi par notre tuteur école. Stage et alternance trouvés grâce au forum de l'école."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.esarc-evolution.fr/journees-portes-ouvertes",
+    "sourceJpoNom": "Agenda JPO officiel ESARC"
   },
   {
     "id": "suptertiaire-bordeaux",
@@ -2363,7 +2427,9 @@ export const SCHOOLS_DATA = [
           "texte": "Une école avec des intervenants professionnels du terrain. Très bonne ambiance sur les quais."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.suptertiaire.com/jpo",
+    "sourceJpoNom": "Portail JPO Suptertiaire"
   },
   {
     "id": "efab-bordeaux",
@@ -2429,7 +2495,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le quartier Euratlantique est super pour faire des visites de programmes neufs. Formateurs au top."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.efab.fr/journees-portes-ouvertes",
+    "sourceJpoNom": "Agenda JPO officiel EFAB"
   },
   {
     "id": "imsi-bordeaux",
@@ -2495,7 +2563,9 @@ export const SCHOOLS_DATA = [
           "texte": "L'IMSI m'a permis de trouver une alternance chez un grand administrateur de biens bordelais dès le mois de mai."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.imsi-formation.com/evenements/jpo",
+    "sourceJpoNom": "Agenda JPO officiel IMSI"
   },
   {
     "id": "talis-bordeaux",
@@ -2561,7 +2631,9 @@ export const SCHOOLS_DATA = [
           "texte": "Équipe pédagogique très dynamique et bon suivi tuteur en entreprise."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.talis-bs.com/evenements",
+    "sourceJpoNom": "Événements & JPO TALIS BS"
   },
   {
     "id": "lycee-francis-jammes-orthez",
@@ -2627,7 +2699,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bonne ambiance de promotion et un vrai esprit d'entraide. Les profs nous soutiennent énormément."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://lyceefrancisjammes.fr",
+    "sourceJpoNom": "Site officiel Lycée Professionnel Public Francis Jammes Orthez"
   },
   {
     "id": "institut-saint-dominique-pau",
@@ -2693,7 +2767,9 @@ export const SCHOOLS_DATA = [
           "texte": "Cadre superbe, professeurs très disponibles et excellents résultats à l'examen final."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.saintdominique.fr",
+    "sourceJpoNom": "Site officiel Pôle Supérieur Saint"
   },
   {
     "id": "eduka-bayonne",
@@ -2759,7 +2835,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le marché de la côte basque est très dynamique et l'école a des contacts dans toutes les agences locales."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://eduka-ecole.fr",
+    "sourceJpoNom": "Site officiel EDUKA Bayonne"
   },
   {
     "id": "talis-bayonne",
@@ -2825,7 +2903,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bon accompagnement pour signer son contrat d'apprentissage."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.talis-bs.com/evenements",
+    "sourceJpoNom": "Événements & JPO TALIS BS"
   },
   {
     "id": "campus-ermitage-agen",
@@ -2891,7 +2971,9 @@ export const SCHOOLS_DATA = [
           "texte": "Des cours de droit très solides grâce à la proximité avec la section notariale."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.campus-ermitage.fr",
+    "sourceJpoNom": "Site officiel Pôle Supérieur Campus Ermitage Agen"
   },
   {
     "id": "talis-perigueux",
@@ -2957,7 +3039,9 @@ export const SCHOOLS_DATA = [
           "texte": "Bonne formation pour s'installer en agence en Dordogne."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.talis-bs.com/evenements",
+    "sourceJpoNom": "Événements & JPO TALIS BS"
   },
   {
     "id": "cfa-landes-dax",
@@ -3023,7 +3107,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bien pour faire son alternance entre Dax et la côte landaise."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.campus-landes.fr",
+    "sourceJpoNom": "Site officiel Campus Landes / CFA de Dax"
   },
   {
     "id": "lycee-jean-perrin-marseille",
@@ -3089,7 +3175,9 @@ export const SCHOOLS_DATA = [
           "texte": "Cadre agréable, profs exigeants et très disponibles pour les révisions de BTS."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=33209&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "pigier-nantes",
@@ -3155,7 +3243,9 @@ export const SCHOOLS_DATA = [
           "texte": "Pris en CDI dès la fin de mon BTS dans mon agence d'accueil. Formation très carrée."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.pigier.com/evenements",
+    "sourceJpoNom": "Événements & JPO Pigier"
   },
   {
     "id": "lycee-pasteur-lille",
@@ -3221,7 +3311,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bonne expérience, professeurs très investis et excellente ambiance de promo."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=6779&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "esup-rennes",
@@ -3287,7 +3379,9 @@ export const SCHOOLS_DATA = [
           "texte": "Excellente école, ambiance chaleureuse et accompagnement personnalisé pour trouver son patron."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.esup-rennes.fr/evenements",
+    "sourceJpoNom": "Agenda & JPO ESUP"
   },
   {
     "id": "lycee-philippe-lamour-nimes",
@@ -3353,7 +3447,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le BTS PI à Philippe Lamour est réputé dans tout le Gard. L'équipe enseignante est au top."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4006&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-aristide-maillol-perpignan",
@@ -3419,7 +3515,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bonne formation, j'ai pu faire mes stages dans une agence de Canet-en-Roussillon et j'ai été embauchée direct."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=29489&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "espi-montpellier",
@@ -3485,7 +3583,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le réseau de l'ESPI fait la différence pour trouver les meilleures alternances en métropole montpelliéraine."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.groupe-espi.fr/campus/montpellier/",
+    "sourceJpoNom": "Agenda Campus ESPI Montpellier"
   },
   {
     "id": "esicad-montpellier",
@@ -3551,7 +3651,9 @@ export const SCHOOLS_DATA = [
           "texte": "Des formateurs passionnés et un très bon accompagnement pour mon contrat pro."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.esicad.com/evenements",
+    "sourceJpoNom": "Agenda officiel JPO ESICAD"
   },
   {
     "id": "idelca-business-school-montpellier",
@@ -3617,7 +3719,9 @@ export const SCHOOLS_DATA = [
           "texte": "Une ambiance d'école formidable avec des profs toujours à l'écoute. Je recommande les yeux fermés."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=30186&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "ecla-montpellier",
@@ -3683,7 +3787,9 @@ export const SCHOOLS_DATA = [
           "texte": "Campus moderne, formateurs sympa et disponibles. Très bon suivi en alternance."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.efficom-montpellier.fr/evenements",
+    "sourceJpoNom": "Agenda officiel Efficom / ECLA"
   },
   {
     "id": "purple-campus-beziers",
@@ -3749,7 +3855,9 @@ export const SCHOOLS_DATA = [
           "texte": "Parfait pour faire son alternance en agence immobilière sur le secteur Agde/Béziers."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.purple-campus.com/agenda/",
+    "sourceJpoNom": "Agenda JPO Purple Campus CCI"
   },
   {
     "id": "purple-campus-perpignan",
@@ -3815,7 +3923,9 @@ export const SCHOOLS_DATA = [
           "texte": "Bonne formation pratique avec des formateurs qui connaissent le terrain catalan."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.purple-campus.com/agenda/",
+    "sourceJpoNom": "Agenda JPO Purple Campus CCI"
   },
   {
     "id": "icfa-carcassonne",
@@ -3881,7 +3991,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très utile pour trouver une alternance dans le département de l'Aude."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://www.sudformation.cci.fr",
+    "sourceJpoNom": "Site officiel ICFA / Sud Formation CCI Carcassonne"
   },
   {
     "id": "lycee-jean-dautet-la-rochelle",
@@ -3947,7 +4059,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le lycée Dautet est ultra réputé à La Rochelle. Stages passionnants sur le marché rétais."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=39110&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-marguerite-de-valois-angouleme",
@@ -4013,7 +4127,9 @@ export const SCHOOLS_DATA = [
           "texte": "Très bonne école avec des professeurs dévoués et sérieux."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10577&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-honore-d-estienne-d-orves-nice",
@@ -4079,7 +4195,9 @@ export const SCHOOLS_DATA = [
           "texte": "Une des meilleures formations du Sud. Les modules de négociation en anglais sont un vrai plus pour la région."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=2181&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-rene-cassin-strasbourg",
@@ -4145,7 +4263,9 @@ export const SCHOOLS_DATA = [
           "texte": "Le module sur les particularités du livre foncier en Alsace est ultra précieux lors de nos embauches en étude notariale ou agence."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=16198&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-emily-bronte-lognes",
@@ -4217,7 +4337,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=34996&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-general-et-technologique-albert-camus-nantes",
@@ -4289,7 +4411,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=5537&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-fragonard-l-isle-adam",
@@ -4361,7 +4485,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11600&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-amep-fort-de-france",
@@ -4433,7 +4559,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=14066&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-et-enseignement-superieur-sully-marseille-6e",
@@ -4505,7 +4633,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=14667&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-jean-paul-ii-rouen",
@@ -4577,7 +4707,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9773&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-grandmont-tours",
@@ -4649,7 +4781,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4843&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-pierre-bayle-sedan",
@@ -4721,7 +4855,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=43341&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-beaussier-la-seyne-sur-mer",
@@ -4793,7 +4929,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10341&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-robert-doisneau-corbeil-essonnes",
@@ -4865,7 +5003,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10846&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-raynouard-brignoles",
@@ -4937,7 +5077,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=14756&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-stephane-hessel-epernay",
@@ -5009,7 +5151,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=15976&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-assomption-bellevue-lyon-7e",
@@ -5081,7 +5225,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=18899&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-professionnel-erik-satie-paris-14e",
@@ -5153,7 +5299,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=21205&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-georges-dumezil-vernon",
@@ -5225,7 +5373,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=28819&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-les-rosiers-lisieux",
@@ -5297,7 +5447,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=2901&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-jules-lesven-brest",
@@ -5369,7 +5521,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=3775&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "groupe-ics-versailles",
@@ -5441,7 +5595,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=37943&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-st-paul-vannes",
@@ -5513,7 +5669,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=41273&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "gambetta-carnot-arras",
@@ -5585,7 +5743,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=7331&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-henri-moissan-meaux",
@@ -5657,7 +5817,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9801&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-georges-de-la-tour-nancy",
@@ -5729,7 +5891,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=6258&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-antoine-de-saint-exupery-les-avirons",
@@ -5801,7 +5965,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11899&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-alain-borne-montelimar",
@@ -5873,7 +6039,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=20127&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-professionnel-camille-claudel-caen",
@@ -5945,7 +6113,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=24670&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-claude-nicolas-ledoux-besancon",
@@ -6017,7 +6187,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=3577&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-geoffroy-st-hilaire-etampes",
@@ -6089,7 +6261,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=36197&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-ste-marie-du-port-les-sables-d-olonne",
@@ -6161,7 +6335,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10502&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-saint-exupery-valserhone",
@@ -6233,7 +6409,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=17649&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-professionnel-rontaunay-saint-denis",
@@ -6305,7 +6483,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=23319&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-sidoine-apollinaire-clermont-ferrand",
@@ -6377,7 +6557,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=7556&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-colbert-lyon-8e",
@@ -6449,7 +6631,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=8230&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-maurice-ravel-paris-20e",
@@ -6521,7 +6705,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9189&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "ipag-business-school-campus-de-nice-nice",
@@ -6593,7 +6779,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=36298&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-rene-descartes-rennes",
@@ -6665,7 +6853,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4770&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-paul-duez-cambrai",
@@ -6737,7 +6927,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=6724&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-pierre-de-coubertin-calais",
@@ -6809,7 +7001,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=7360&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-la-hotoie-amiens",
@@ -6881,7 +7075,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10249&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-martin-schongauer-colmar",
@@ -6953,7 +7149,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=8176&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-ampere-lyon-2e",
@@ -7025,7 +7223,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=8180&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-simone-signoret-vaux-le-penil",
@@ -7097,7 +7297,9 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9886&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   },
   {
     "id": "lycee-plaine-de-neauphle-trappes",
@@ -7169,6 +7371,8 @@ export const SCHOOLS_DATA = [
           "texte": "Ambiance studieuse et bonne préparation aux épreuves du BTS PI."
         }
       ]
-    }
+    },
+    "sourceJpoUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9967&typeBac=0&originePc=0",
+    "sourceJpoNom": "Fiche officielle Parcoursup (Section JPO)"
   }
 ];

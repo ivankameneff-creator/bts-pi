@@ -192,6 +192,16 @@ export function InteractiveMap({
             </span>
           `}
         </div>
+        ${school.datePortesOuvertes ? `
+          <div class="mt-2 bg-amber-500/10 border border-amber-500/30 rounded-lg p-1.5 text-[10px] text-amber-200 flex items-center justify-between gap-1">
+            <span class="truncate">📅 <strong>JPO :</strong> ${school.datePortesOuvertes}</span>
+            ${school.sourceJpoUrl ? `
+              <a href="${school.sourceJpoUrl}" target="_blank" rel="noopener noreferrer" class="shrink-0 text-amber-300 hover:text-white underline font-bold" title="Vérifier la date sur la source officielle">
+                Source ↗
+              </a>
+            ` : ''}
+          </div>
+        ` : ''}
         <div class="mt-3 pt-2.5 border-t border-slate-800 flex flex-col gap-1.5">
           <button id="view-school-${school.id}" class="w-full py-2 px-3 rounded-xl text-xs font-bold bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors flex items-center justify-center gap-1 shadow-md">
             Voir la fiche détaillée &rarr;

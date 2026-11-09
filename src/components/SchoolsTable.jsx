@@ -322,10 +322,24 @@ export function SchoolsTable({
                   {/* JPO */}
                   <td className="py-3 px-3 text-xs">
                     {school.datePortesOuvertes ? (
-                      <span className="text-amber-200/90 font-medium flex items-center gap-1 line-clamp-2 max-w-[170px]">
-                        <Calendar className="w-3 h-3 text-amber-400 shrink-0" />
-                        {school.datePortesOuvertes}
-                      </span>
+                      <div className="flex flex-col gap-1 max-w-[190px]">
+                        <span className="text-amber-200/90 font-medium flex items-center gap-1">
+                          <Calendar className="w-3 h-3 text-amber-400 shrink-0" />
+                          <span className="line-clamp-2">{school.datePortesOuvertes}</span>
+                        </span>
+                        {school.sourceJpoUrl && (
+                          <a
+                            href={school.sourceJpoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] text-amber-300 hover:text-white underline underline-offset-2 ml-4 w-fit font-semibold"
+                            title={`Vérifier la JPO sur : ${school.sourceJpoNom || 'Lien source'}`}
+                          >
+                            <span>Lien source</span>
+                            <ExternalLink className="w-2.5 h-2.5" />
+                          </a>
+                        )}
+                      </div>
                     ) : (
                       <span className="text-slate-600 italic">Non communiquée</span>
                     )}

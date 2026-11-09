@@ -359,6 +359,17 @@ export function Globe3DMap({
             </div>
           `}
 
+          ${school.datePortesOuvertes ? `
+            <div class="mt-2 bg-amber-950/20 border border-amber-500/30 rounded-lg p-2 text-[10px] text-amber-200 flex items-center justify-between gap-1">
+              <span class="truncate">📅 <strong>JPO :</strong> ${school.datePortesOuvertes}</span>
+              ${school.sourceJpoUrl ? `
+                <a href="${school.sourceJpoUrl}" target="_blank" rel="noopener noreferrer" class="shrink-0 text-amber-300 hover:text-white underline font-bold" title="Vérifier la date sur la source officielle">
+                  Source ↗
+                </a>
+              ` : ''}
+            </div>
+          ` : ''}
+
           <div class="mt-3 pt-2 border-t border-slate-800 flex flex-col gap-1.5">
             <button id="globe-btn-school-${school.id}" class="w-full py-2 px-3 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 hover:brightness-110 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-emerald-500/20">
               <span>Fiche École Complète</span>
