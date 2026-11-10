@@ -25,6 +25,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { THOTIS_SOURCE_URL, PARCOURSUP_SOURCE_URL } from '../data/schoolsData';
+import { ParcoursupBilanCard } from './ParcoursupBilanCard';
 
 export function SchoolDetailModal({ 
   school, 
@@ -299,103 +300,28 @@ END:VCALENDAR`;
                 </div>
               </div>
 
-              {/* Note explicative & source officielle Parcoursup Open Data */}
-              <div className="bg-cyan-950/20 border border-cyan-500/30 rounded-2xl p-5 flex items-start gap-3.5 text-xs text-slate-300">
-                <TrendingUp className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
-                <div className="space-y-3 leading-relaxed w-full">
-                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-cyan-500/20 pb-2">
-                    <div>
-                      <span className="font-bold text-cyan-300 text-sm block">
-                        Données officielles Parcoursup Open Data (Ministère MESR)
-                      </span>
-                      {school.parcoursup?.uai && (
-                        <span className="text-[11px] text-slate-400 font-mono">
-                          Code UAI : <strong className="text-white">{school.parcoursup.uai}</strong> • Session {school.parcoursup.session || '2024'}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <a 
-                        href={school.parcoursup?.openDataUrl || school.parcoursup?.openDataSearchUrl || PARCOURSUP_SOURCE_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 border border-cyan-500/40 font-semibold text-xs transition-colors"
-                        title="Vérifier la source officielle sur data.enseignementsup-recherche.gouv.fr (nouvel onglet)"
-                      >
-                        <span>Vérifier la source Open Data</span>
-                        <ExternalLink className="w-3 h-3" />
-                      </a>
-                      {school.parcoursup?.parcoursupUrl && (
-                        <a 
-                          href={school.parcoursup.parcoursupUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 border border-emerald-500/40 font-semibold text-xs transition-colors"
-                          title="Ouvrir la fiche officielle sur Parcoursup.gouv.fr"
-                        >
-                          <span>Fiche Parcoursup</span>
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      )}
-                    </div>
+              {/* Fiche Bilan Parcoursup Officielle (Session 2024 - MESR) */}
+              <ParcoursupBilanCard school={school} />
+
+              {school.classementThotis && (
+                <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-amber-200">
+                  <div className="flex items-center gap-2">
+                    <Award className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span>
+                      🏆 Référence palmarès : classé <strong>#{school.classementThotis}</strong> national sur 102 formations (Thotis Media).
+                    </span>
                   </div>
-
-                  {school.parcoursup?.surParcoursup ? (
-                    <div className="space-y-2.5">
-                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 pt-1 text-slate-300">
-                        <div className="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-semibold">Vœux Totaux</span>
-                          <span className="font-black text-white text-base">{school.parcoursup.demandes.toLocaleString()}</span>
-                          <span className="text-[10px] text-slate-500 block">Toutes phases</span>
-                        </div>
-                        <div className="bg-slate-900/90 p-2.5 rounded-xl border border-cyan-800/50 bg-cyan-950/20">
-                          <span className="text-[10px] text-cyan-300 block uppercase tracking-wider font-semibold">Phase Principale</span>
-                          <span className="font-black text-cyan-200 text-base">{school.parcoursup.voeuxPhasePrincipale?.toLocaleString()}</span>
-                          <span className="text-[10px] text-cyan-400/80 block">1re intention</span>
-                        </div>
-                        <div className="bg-slate-900/90 p-2.5 rounded-xl border border-amber-800/50 bg-amber-950/20">
-                          <span className="text-[10px] text-amber-300 block uppercase tracking-wider font-semibold">Admis 1er Choix (J1)</span>
-                          <span className="font-black text-amber-200 text-base">{school.parcoursup.voeuxPremierePlace ?? 0}</span>
-                          <span className="text-[10px] text-amber-400/80 block">{school.parcoursup.pctAdmisDebutPP}% dès l'ouverture</span>
-                        </div>
-                        <div className="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-semibold">Total Admis</span>
-                          <span className="font-black text-emerald-400 text-base">{school.parcoursup.pris}</span>
-                          <span className="text-[10px] text-slate-500 block">Propositions acceptées</span>
-                        </div>
-                        <div className="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-semibold">Capacité</span>
-                          <span className="font-black text-white text-base">{school.parcoursup.places}</span>
-                          <span className="text-[10px] text-slate-500 block">Places offertes</span>
-                        </div>
-                        <div className="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block uppercase tracking-wider font-semibold">Taux d'Accès</span>
-                          <span className="font-black text-cyan-300 text-base">{school.parcoursup.tauxAcces}%</span>
-                          <span className="text-[10px] text-slate-500 block">Rang der. : {school.parcoursup.rangDernierAppele || 'N/C'}</span>
-                        </div>
-                      </div>
-
-                      <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-400 leading-relaxed">
-                        <strong className="text-slate-300">💡 Méthodologie Open Data Parcoursup (Vœux en 1ère place) :</strong> Sur Parcoursup, les vœux formulés ne sont pas hiérarchisés numériquement (pas de classement 1er, 2e, 3e vœu). Le Ministère mesure donc la priorité d'affectation par le nombre de <strong>vœux en Phase Principale</strong> ({school.parcoursup.voeuxPhasePrincipale?.toLocaleString()} vœux de 1re intention) et le nombre de <strong>candidats admis dès le 1er jour</strong> ({school.parcoursup.voeuxPremierePlace ?? 0} admis J1) ayant validé sans attendre cette formation comme leur choix N°1 prioritaire.
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="space-y-2">
-                      <p className="text-slate-400">
-                        Cet établissement recrute principalement en dehors de la procédure principale Parcoursup (CFA d'entreprise, école consulaire ou privée hors contrat). L'admission s'effectue sur dossier de candidature personnalisé et entretien de motivation directement auprès du secrétariat.
-                      </p>
-                      <p className="text-[11px] text-slate-500">
-                        Vous pouvez vérifier l'absence d'inscription dans le contingent scolaire Parcoursup sur l'Open Data en cliquant sur « Vérifier la source Open Data ».
-                      </p>
-                    </div>
-                  )}
-                  {school.classementThotis && (
-                    <p className="text-[11px] text-slate-400 pt-1.5 border-t border-slate-800/80">
-                      🏆 Référence complémentaire : classé <strong>#{school.classementThotis}</strong> au palmarès Thotis Media (<a href={THOTIS_SOURCE_URL} target="_blank" rel="noopener noreferrer" className="text-amber-400 underline hover:text-amber-300">voir classement Thotis</a>).
-                    </p>
-                  )}
+                  <a 
+                    href={THOTIS_SOURCE_URL} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-1 font-semibold text-amber-300 underline hover:text-white transition-colors"
+                  >
+                    <span>Consulter le classement</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
-              </div>
+              )}
 
               {/* Description */}
               <div className="bg-slate-950/40 p-5 rounded-2xl border border-slate-800/80">

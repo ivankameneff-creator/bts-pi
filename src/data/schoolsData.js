@@ -266,7 +266,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4220&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0312290W&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0312290W"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0312290W",
+      "pressionCandidats": 57.3,
+      "nbCandidatsClasses": 527,
+      "totalPropositions": 119,
+      "admisFinPP": 19,
+      "pctAdmisFinPP": 86,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 30,
+          "admis": 6,
+          "tauxAcces": 33
+        },
+        "techno": {
+          "pct": 30,
+          "admis": 6,
+          "tauxAcces": 32
+        },
+        "pro": {
+          "pct": 40,
+          "admis": 8,
+          "tauxAcces": 35
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 30,
+        "assezBien": 50,
+        "bien": 10,
+        "tresBien": 10
+      },
+      "diversite": {
+        "pctBoursiers": 55,
+        "pctFemmes": 68,
+        "pctAcademieOrigine": 70,
+        "pctNeoBacheliers": 91
+      }
     },
     "tauxElearning": 15,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 13h00",
@@ -340,7 +378,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=20220&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0312408Z&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0312408Z"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0312408Z",
+      "pressionCandidats": 17.4,
+      "nbCandidatsClasses": 309,
+      "totalPropositions": 93,
+      "admisFinPP": 16,
+      "pctAdmisFinPP": 80,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 35,
+          "admis": 7,
+          "tauxAcces": 27
+        },
+        "techno": {
+          "pct": 35,
+          "admis": 7,
+          "tauxAcces": 34
+        },
+        "pro": {
+          "pct": 30,
+          "admis": 6,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 0
+        }
+      },
+      "mentions": {
+        "sansMention": 35,
+        "assezBien": 50,
+        "bien": 15,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 30,
+        "pctFemmes": 60,
+        "pctAcademieOrigine": 95,
+        "pctNeoBacheliers": 100
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 24 Janvier 2026 de 9h00 à 16h00",
@@ -754,7 +830,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=38385&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0820904M&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0820904M"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0820904M",
+      "pressionCandidats": 12.3,
+      "nbCandidatsClasses": 124,
+      "totalPropositions": 98,
+      "admisFinPP": 3,
+      "pctAdmisFinPP": 43,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 0,
+          "admis": 0,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 60,
+          "admis": 3,
+          "tauxAcces": 43
+        },
+        "pro": {
+          "pct": 40,
+          "admis": 2,
+          "tauxAcces": 26
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 80,
+        "assezBien": 20,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 0,
+        "pctFemmes": 71,
+        "pctAcademieOrigine": 80,
+        "pctNeoBacheliers": 71
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 13h00",
@@ -1366,7 +1480,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=25344&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0460007H&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0460007H"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0460007H",
+      "pressionCandidats": 16.4,
+      "nbCandidatsClasses": 295,
+      "totalPropositions": 97,
+      "admisFinPP": 12,
+      "pctAdmisFinPP": 80,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 38,
+          "admis": 5,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 23,
+          "admis": 3,
+          "tauxAcces": 36
+        },
+        "pro": {
+          "pct": 38,
+          "admis": 5,
+          "tauxAcces": 34
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 31,
+        "assezBien": 38,
+        "bien": 31,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 15,
+        "pctFemmes": 67,
+        "pctAcademieOrigine": 77,
+        "pctNeoBacheliers": 87
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 14 Février 2026 de 9h00 à 12h30",
@@ -1434,7 +1586,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9156&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0750707L&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0750707L"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0750707L",
+      "pressionCandidats": 86.1,
+      "nbCandidatsClasses": 1194,
+      "totalPropositions": 142,
+      "admisFinPP": 27,
+      "pctAdmisFinPP": 79,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 45,
+          "admis": 14,
+          "tauxAcces": 32
+        },
+        "techno": {
+          "pct": 23,
+          "admis": 7,
+          "tauxAcces": 34
+        },
+        "pro": {
+          "pct": 32,
+          "admis": 10,
+          "tauxAcces": 34
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 35,
+        "assezBien": 42,
+        "bien": 23,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 32,
+        "pctFemmes": 71,
+        "pctAcademieOrigine": 42,
+        "pctNeoBacheliers": 91
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 16h30",
@@ -1718,7 +1908,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9379&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0753268V&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0753268V"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0753268V",
+      "pressionCandidats": 78.6,
+      "nbCandidatsClasses": 859,
+      "totalPropositions": 208,
+      "admisFinPP": 31,
+      "pctAdmisFinPP": 86,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 27,
+          "admis": 9,
+          "tauxAcces": 30
+        },
+        "techno": {
+          "pct": 33,
+          "admis": 11,
+          "tauxAcces": 33
+        },
+        "pro": {
+          "pct": 39,
+          "admis": 13,
+          "tauxAcces": 37
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 21,
+        "assezBien": 61,
+        "bien": 15,
+        "tresBien": 3
+      },
+      "diversite": {
+        "pctBoursiers": 36,
+        "pctFemmes": 61,
+        "pctAcademieOrigine": 15,
+        "pctNeoBacheliers": 92
+      }
     },
     "tauxElearning": 5,
     "datePortesOuvertes": "Samedi 10 Janvier 2026 de 10h00 à 15h00",
@@ -1786,7 +2014,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11117&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0921399W&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0921399W"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0921399W",
+      "pressionCandidats": 34.1,
+      "nbCandidatsClasses": 550,
+      "totalPropositions": 201,
+      "admisFinPP": 25,
+      "pctAdmisFinPP": 86,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 25,
+          "admis": 6,
+          "tauxAcces": 27
+        },
+        "techno": {
+          "pct": 29,
+          "admis": 7,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 46,
+          "admis": 11,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 38,
+        "assezBien": 42,
+        "bien": 21,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 25,
+        "pctFemmes": 59,
+        "pctAcademieOrigine": 54,
+        "pctNeoBacheliers": 83
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 13h00",
@@ -1854,7 +2120,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11187&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0930123D&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0930123D"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0930123D",
+      "pressionCandidats": 48.8,
+      "nbCandidatsClasses": 788,
+      "totalPropositions": 157,
+      "admisFinPP": 19,
+      "pctAdmisFinPP": 86,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 40,
+          "admis": 8,
+          "tauxAcces": 30
+        },
+        "techno": {
+          "pct": 30,
+          "admis": 6,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 30,
+          "admis": 6,
+          "tauxAcces": 35
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 30,
+        "assezBien": 60,
+        "bien": 10,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 50,
+        "pctFemmes": 64,
+        "pctAcademieOrigine": 80,
+        "pctNeoBacheliers": 91
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 14 Mars 2026 de 9h00 à 12h30",
@@ -1922,7 +2226,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=26524&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0690670D&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690670D"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690670D",
+      "pressionCandidats": 1,
+      "nbCandidatsClasses": 77,
+      "totalPropositions": 78,
+      "admisFinPP": 12,
+      "pctAdmisFinPP": 92,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 50,
+          "admis": 5,
+          "tauxAcces": 41
+        },
+        "techno": {
+          "pct": 40,
+          "admis": 4,
+          "tauxAcces": 44
+        },
+        "pro": {
+          "pct": 10,
+          "admis": 1,
+          "tauxAcces": 14
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 90,
+        "assezBien": 10,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 40,
+        "pctFemmes": 46,
+        "pctAcademieOrigine": 60,
+        "pctNeoBacheliers": 77
+      }
     },
     "tauxElearning": 15,
     "datePortesOuvertes": "Samedi 21 Février 2026 de 10h00 à 16h00",
@@ -1990,7 +2332,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=35116&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0741164N&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0741164N"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0741164N",
+      "pressionCandidats": 43.4,
+      "nbCandidatsClasses": 452,
+      "totalPropositions": 109,
+      "admisFinPP": 7,
+      "pctAdmisFinPP": 50,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 36,
+          "admis": 5,
+          "tauxAcces": 30
+        },
+        "techno": {
+          "pct": 36,
+          "admis": 5,
+          "tauxAcces": 33
+        },
+        "pro": {
+          "pct": 29,
+          "admis": 4,
+          "tauxAcces": 37
+        },
+        "autres": {
+          "admis": 0
+        }
+      },
+      "mentions": {
+        "sansMention": 50,
+        "assezBien": 50,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 14,
+        "pctFemmes": 64,
+        "pctAcademieOrigine": 86,
+        "pctNeoBacheliers": 100
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -2058,7 +2438,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4366&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0331760J&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0331760J"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0331760J",
+      "pressionCandidats": 40.7,
+      "nbCandidatsClasses": 542,
+      "totalPropositions": 257,
+      "admisFinPP": 28,
+      "pctAdmisFinPP": 82,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 41,
+          "admis": 11,
+          "tauxAcces": 29
+        },
+        "techno": {
+          "pct": 41,
+          "admis": 11,
+          "tauxAcces": 38
+        },
+        "pro": {
+          "pct": 19,
+          "admis": 5,
+          "tauxAcces": 32
+        },
+        "autres": {
+          "admis": 7
+        }
+      },
+      "mentions": {
+        "sansMention": 30,
+        "assezBien": 33,
+        "bien": 37,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 19,
+        "pctFemmes": 44,
+        "pctAcademieOrigine": 85,
+        "pctNeoBacheliers": 79
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 16h00",
@@ -3146,7 +3564,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=33209&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0130043B&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0130043B"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0130043B",
+      "pressionCandidats": 67.5,
+      "nbCandidatsClasses": 407,
+      "totalPropositions": 168,
+      "admisFinPP": 11,
+      "pctAdmisFinPP": 73,
+      "admisPhaseComplementaire": 2,
+      "profilBac": {
+        "general": {
+          "pct": 15,
+          "admis": 2,
+          "tauxAcces": 27
+        },
+        "techno": {
+          "pct": 62,
+          "admis": 8,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 23,
+          "admis": 3,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 46,
+        "assezBien": 54,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 54,
+        "pctFemmes": 87,
+        "pctAcademieOrigine": 92,
+        "pctNeoBacheliers": 87
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 21 Février 2026 de 9h00 à 13h00",
@@ -3282,7 +3738,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=6779&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0590117G&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0590117G"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0590117G",
+      "pressionCandidats": 24.1,
+      "nbCandidatsClasses": 1125,
+      "totalPropositions": 279,
+      "admisFinPP": 47,
+      "pctAdmisFinPP": 90,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 46,
+          "admis": 18,
+          "tauxAcces": 45
+        },
+        "techno": {
+          "pct": 31,
+          "admis": 12,
+          "tauxAcces": 20
+        },
+        "pro": {
+          "pct": 23,
+          "admis": 9,
+          "tauxAcces": 35
+        },
+        "autres": {
+          "admis": 13
+        }
+      },
+      "mentions": {
+        "sansMention": 44,
+        "assezBien": 44,
+        "bien": 10,
+        "tresBien": 3
+      },
+      "diversite": {
+        "pctBoursiers": 46,
+        "pctFemmes": 62,
+        "pctAcademieOrigine": 92,
+        "pctNeoBacheliers": 75
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 16h00",
@@ -3418,7 +3912,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4006&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0301552Z&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0301552Z"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0301552Z",
+      "pressionCandidats": 34.5,
+      "nbCandidatsClasses": 491,
+      "totalPropositions": 221,
+      "admisFinPP": 20,
+      "pctAdmisFinPP": 87,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 43,
+          "admis": 9,
+          "tauxAcces": 23
+        },
+        "techno": {
+          "pct": 43,
+          "admis": 9,
+          "tauxAcces": 48
+        },
+        "pro": {
+          "pct": 14,
+          "admis": 3,
+          "tauxAcces": 29
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 43,
+        "assezBien": 38,
+        "bien": 10,
+        "tresBien": 10
+      },
+      "diversite": {
+        "pctBoursiers": 29,
+        "pctFemmes": 43,
+        "pctAcademieOrigine": 76,
+        "pctNeoBacheliers": 91
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 16h00",
@@ -3486,7 +4018,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=29489&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0660809W&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0660809W"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0660809W",
+      "pressionCandidats": 22.8,
+      "nbCandidatsClasses": 520,
+      "totalPropositions": 145,
+      "admisFinPP": 20,
+      "pctAdmisFinPP": 77,
+      "admisPhaseComplementaire": 4,
+      "profilBac": {
+        "general": {
+          "pct": 12,
+          "admis": 2,
+          "tauxAcces": 29
+        },
+        "techno": {
+          "pct": 35,
+          "admis": 6,
+          "tauxAcces": 37
+        },
+        "pro": {
+          "pct": 53,
+          "admis": 9,
+          "tauxAcces": 34
+        },
+        "autres": {
+          "admis": 9
+        }
+      },
+      "mentions": {
+        "sansMention": 35,
+        "assezBien": 6,
+        "bien": 41,
+        "tresBien": 18
+      },
+      "diversite": {
+        "pctBoursiers": 47,
+        "pctFemmes": 54,
+        "pctAcademieOrigine": 88,
+        "pctNeoBacheliers": 65
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 13h00",
@@ -3690,7 +4260,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=30186&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0340994W&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0340994W"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0340994W",
+      "pressionCandidats": 4.1,
+      "nbCandidatsClasses": 101,
+      "totalPropositions": 119,
+      "admisFinPP": 3,
+      "pctAdmisFinPP": 75,
+      "admisPhaseComplementaire": 3,
+      "profilBac": {
+        "general": {
+          "pct": 33,
+          "admis": 1,
+          "tauxAcces": 38
+        },
+        "techno": {
+          "pct": 33,
+          "admis": 1,
+          "tauxAcces": 43
+        },
+        "pro": {
+          "pct": 33,
+          "admis": 1,
+          "tauxAcces": 19
+        },
+        "autres": {
+          "admis": 1
+        }
+      },
+      "mentions": {
+        "sansMention": 67,
+        "assezBien": 33,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 0,
+        "pctFemmes": 25,
+        "pctAcademieOrigine": 33,
+        "pctNeoBacheliers": 75
+      }
     },
     "tauxElearning": 15,
     "datePortesOuvertes": "Samedi 7 Mars 2026 de 9h00 à 13h00",
@@ -4030,7 +4638,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=39110&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0790023W&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0790023W"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0790023W",
+      "pressionCandidats": 19.5,
+      "nbCandidatsClasses": 166,
+      "totalPropositions": 126,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 95,
+      "admisPhaseComplementaire": 9,
+      "profilBac": {
+        "general": {
+          "pct": 18,
+          "admis": 3,
+          "tauxAcces": 30
+        },
+        "techno": {
+          "pct": 47,
+          "admis": 8,
+          "tauxAcces": 49
+        },
+        "pro": {
+          "pct": 35,
+          "admis": 6,
+          "tauxAcces": 21
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 41,
+        "assezBien": 41,
+        "bien": 18,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 29,
+        "pctFemmes": 55,
+        "pctAcademieOrigine": 65,
+        "pctNeoBacheliers": 77
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 7 Février 2026 de 9h00 à 16h00",
@@ -4098,7 +4744,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10577&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0860005N&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0860005N"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0860005N",
+      "pressionCandidats": 12.7,
+      "nbCandidatsClasses": 195,
+      "totalPropositions": 167,
+      "admisFinPP": 17,
+      "pctAdmisFinPP": 85,
+      "admisPhaseComplementaire": 5,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 4,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 57,
+          "admis": 8,
+          "tauxAcces": 54
+        },
+        "pro": {
+          "pct": 14,
+          "admis": 2,
+          "tauxAcces": 15
+        },
+        "autres": {
+          "admis": 6
+        }
+      },
+      "mentions": {
+        "sansMention": 79,
+        "assezBien": 14,
+        "bien": 7,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 36,
+        "pctFemmes": 55,
+        "pctAcademieOrigine": 79,
+        "pctNeoBacheliers": 70
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 14 Février 2026 de 9h00 à 13h00",
@@ -4166,7 +4850,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=2181&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0060001U&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0060001U"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0060001U",
+      "pressionCandidats": 37.8,
+      "nbCandidatsClasses": 401,
+      "totalPropositions": 142,
+      "admisFinPP": 11,
+      "pctAdmisFinPP": 58,
+      "admisPhaseComplementaire": 3,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 4,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 57,
+          "admis": 8,
+          "tauxAcces": 33
+        },
+        "pro": {
+          "pct": 14,
+          "admis": 2,
+          "tauxAcces": 36
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 57,
+        "assezBien": 21,
+        "bien": 21,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 36,
+        "pctFemmes": 63,
+        "pctAcademieOrigine": 93,
+        "pctNeoBacheliers": 74
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 14 Février 2026 de 9h00 à 13h00",
@@ -4234,7 +4956,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=16198&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0672050P&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0672050P"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0672050P",
+      "pressionCandidats": 10.8,
+      "nbCandidatsClasses": 335,
+      "totalPropositions": 201,
+      "admisFinPP": 26,
+      "pctAdmisFinPP": 81,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 39,
+          "admis": 9,
+          "tauxAcces": 51
+        },
+        "techno": {
+          "pct": 48,
+          "admis": 11,
+          "tauxAcces": 32
+        },
+        "pro": {
+          "pct": 13,
+          "admis": 3,
+          "tauxAcces": 16
+        },
+        "autres": {
+          "admis": 9
+        }
+      },
+      "mentions": {
+        "sansMention": 57,
+        "assezBien": 22,
+        "bien": 22,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 9,
+        "pctFemmes": 53,
+        "pctAcademieOrigine": 96,
+        "pctNeoBacheliers": 72
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 28 Février 2026 de 9h00 à 16h00",
@@ -4302,7 +5062,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=34996&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0772294A&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0772294A"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0772294A",
+      "pressionCandidats": 24.6,
+      "nbCandidatsClasses": 372,
+      "totalPropositions": 122,
+      "admisFinPP": 23,
+      "pctAdmisFinPP": 96,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 5,
+          "tauxAcces": 30
+        },
+        "techno": {
+          "pct": 35,
+          "admis": 6,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 35,
+          "admis": 6,
+          "tauxAcces": 35
+        },
+        "autres": {
+          "admis": 7
+        }
+      },
+      "mentions": {
+        "sansMention": 35,
+        "assezBien": 53,
+        "bien": 12,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 35,
+        "pctFemmes": 50,
+        "pctAcademieOrigine": 94,
+        "pctNeoBacheliers": 71
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4376,7 +5174,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=5537&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0440288Z&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0440288Z"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0440288Z",
+      "pressionCandidats": 33.2,
+      "nbCandidatsClasses": 589,
+      "totalPropositions": 203,
+      "admisFinPP": 25,
+      "pctAdmisFinPP": 86,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 32,
+          "admis": 8,
+          "tauxAcces": 32
+        },
+        "techno": {
+          "pct": 40,
+          "admis": 10,
+          "tauxAcces": 38
+        },
+        "pro": {
+          "pct": 28,
+          "admis": 7,
+          "tauxAcces": 30
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 40,
+        "assezBien": 44,
+        "bien": 12,
+        "tresBien": 4
+      },
+      "diversite": {
+        "pctBoursiers": 36,
+        "pctFemmes": 76,
+        "pctAcademieOrigine": 64,
+        "pctNeoBacheliers": 86
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4450,7 +5286,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11600&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0951147F&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0951147F"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0951147F",
+      "pressionCandidats": 17.7,
+      "nbCandidatsClasses": 281,
+      "totalPropositions": 166,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 75,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 9,
+          "admis": 2,
+          "tauxAcces": 28
+        },
+        "techno": {
+          "pct": 55,
+          "admis": 12,
+          "tauxAcces": 36
+        },
+        "pro": {
+          "pct": 36,
+          "admis": 8,
+          "tauxAcces": 36
+        },
+        "autres": {
+          "admis": 6
+        }
+      },
+      "mentions": {
+        "sansMention": 55,
+        "assezBien": 27,
+        "bien": 14,
+        "tresBien": 5
+      },
+      "diversite": {
+        "pctBoursiers": 27,
+        "pctFemmes": 54,
+        "pctAcademieOrigine": 77,
+        "pctNeoBacheliers": 79
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4524,7 +5398,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=14066&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=9720615L&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=9720615L"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=9720615L",
+      "pressionCandidats": 7.3,
+      "nbCandidatsClasses": 103,
+      "totalPropositions": 64,
+      "admisFinPP": 15,
+      "pctAdmisFinPP": 88,
+      "admisPhaseComplementaire": 3,
+      "profilBac": {
+        "general": {
+          "pct": 46,
+          "admis": 6,
+          "tauxAcces": 49
+        },
+        "techno": {
+          "pct": 38,
+          "admis": 5,
+          "tauxAcces": 39
+        },
+        "pro": {
+          "pct": 15,
+          "admis": 2,
+          "tauxAcces": 12
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 46,
+        "assezBien": 31,
+        "bien": 23,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 31,
+        "pctFemmes": 71,
+        "pctAcademieOrigine": 62,
+        "pctNeoBacheliers": 76
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4598,7 +5510,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=14667&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0131398Z&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0131398Z"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0131398Z",
+      "pressionCandidats": 8.4,
+      "nbCandidatsClasses": 315,
+      "totalPropositions": 235,
+      "admisFinPP": 35,
+      "pctAdmisFinPP": 83,
+      "admisPhaseComplementaire": 2,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 8,
+          "tauxAcces": 33
+        },
+        "techno": {
+          "pct": 46,
+          "admis": 13,
+          "tauxAcces": 46
+        },
+        "pro": {
+          "pct": 25,
+          "admis": 7,
+          "tauxAcces": 21
+        },
+        "autres": {
+          "admis": 14
+        }
+      },
+      "mentions": {
+        "sansMention": 68,
+        "assezBien": 25,
+        "bien": 7,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 32,
+        "pctFemmes": 45,
+        "pctAcademieOrigine": 86,
+        "pctNeoBacheliers": 67
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4672,7 +5622,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9773&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0763409T&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0763409T"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0763409T",
+      "pressionCandidats": 11.7,
+      "nbCandidatsClasses": 397,
+      "totalPropositions": 192,
+      "admisFinPP": 15,
+      "pctAdmisFinPP": 75,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 4,
+          "tauxAcces": 28
+        },
+        "techno": {
+          "pct": 50,
+          "admis": 7,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 21,
+          "admis": 3,
+          "tauxAcces": 36
+        },
+        "autres": {
+          "admis": 6
+        }
+      },
+      "mentions": {
+        "sansMention": 50,
+        "assezBien": 14,
+        "bien": 29,
+        "tresBien": 7
+      },
+      "diversite": {
+        "pctBoursiers": 21,
+        "pctFemmes": 65,
+        "pctAcademieOrigine": 93,
+        "pctNeoBacheliers": 70
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4746,7 +5734,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4843&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0370038R&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0370038R"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0370038R",
+      "pressionCandidats": 35.5,
+      "nbCandidatsClasses": 485,
+      "totalPropositions": 143,
+      "admisFinPP": 15,
+      "pctAdmisFinPP": 62,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 21,
+          "admis": 4,
+          "tauxAcces": 20
+        },
+        "techno": {
+          "pct": 58,
+          "admis": 11,
+          "tauxAcces": 29
+        },
+        "pro": {
+          "pct": 21,
+          "admis": 4,
+          "tauxAcces": 51
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 16,
+        "assezBien": 58,
+        "bien": 26,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 37,
+        "pctFemmes": 67,
+        "pctAcademieOrigine": 68,
+        "pctNeoBacheliers": 79
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4820,7 +5846,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=43341&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0080045F&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0080045F"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0080045F",
+      "pressionCandidats": 9.8,
+      "nbCandidatsClasses": 164,
+      "totalPropositions": 82,
+      "admisFinPP": 8,
+      "pctAdmisFinPP": 80,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 20,
+          "admis": 1,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 20,
+          "admis": 1,
+          "tauxAcces": 32
+        },
+        "pro": {
+          "pct": 60,
+          "admis": 3,
+          "tauxAcces": 37
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 40,
+        "assezBien": 20,
+        "bien": 40,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 40,
+        "pctFemmes": 80,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 50
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4894,7 +5958,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10341&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0830050D&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0830050D"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0830050D",
+      "pressionCandidats": 25.4,
+      "nbCandidatsClasses": 327,
+      "totalPropositions": 128,
+      "admisFinPP": 15,
+      "pctAdmisFinPP": 88,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 46,
+          "admis": 6,
+          "tauxAcces": 32
+        },
+        "techno": {
+          "pct": 31,
+          "admis": 4,
+          "tauxAcces": 34
+        },
+        "pro": {
+          "pct": 23,
+          "admis": 3,
+          "tauxAcces": 33
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 54,
+        "assezBien": 23,
+        "bien": 23,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 31,
+        "pctFemmes": 76,
+        "pctAcademieOrigine": 77,
+        "pctNeoBacheliers": 76
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -4968,7 +6070,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10846&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0910620E&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0910620E"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0910620E",
+      "pressionCandidats": 31.7,
+      "nbCandidatsClasses": 451,
+      "totalPropositions": 169,
+      "admisFinPP": 30,
+      "pctAdmisFinPP": 97,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 18,
+          "admis": 5,
+          "tauxAcces": 22
+        },
+        "techno": {
+          "pct": 46,
+          "admis": 13,
+          "tauxAcces": 40
+        },
+        "pro": {
+          "pct": 36,
+          "admis": 10,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 61,
+        "assezBien": 29,
+        "bien": 7,
+        "tresBien": 4
+      },
+      "diversite": {
+        "pctBoursiers": 25,
+        "pctFemmes": 71,
+        "pctAcademieOrigine": 68,
+        "pctNeoBacheliers": 90
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5042,7 +6182,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=14756&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0830007G&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0830007G"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0830007G",
+      "pressionCandidats": 24.5,
+      "nbCandidatsClasses": 111,
+      "totalPropositions": 72,
+      "admisFinPP": 10,
+      "pctAdmisFinPP": 91,
+      "admisPhaseComplementaire": 4,
+      "profilBac": {
+        "general": {
+          "pct": 12,
+          "admis": 1,
+          "tauxAcces": 16
+        },
+        "techno": {
+          "pct": 62,
+          "admis": 5,
+          "tauxAcces": 31
+        },
+        "pro": {
+          "pct": 25,
+          "admis": 2,
+          "tauxAcces": 53
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 38,
+        "assezBien": 38,
+        "bien": 25,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 12,
+        "pctFemmes": 45,
+        "pctAcademieOrigine": 88,
+        "pctNeoBacheliers": 73
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5116,7 +6294,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=15976&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0510068X&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0510068X"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0510068X",
+      "pressionCandidats": 13.3,
+      "nbCandidatsClasses": 320,
+      "totalPropositions": 130,
+      "admisFinPP": 15,
+      "pctAdmisFinPP": 75,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 21,
+          "admis": 3,
+          "tauxAcces": 37
+        },
+        "techno": {
+          "pct": 57,
+          "admis": 8,
+          "tauxAcces": 27
+        },
+        "pro": {
+          "pct": 21,
+          "admis": 3,
+          "tauxAcces": 36
+        },
+        "autres": {
+          "admis": 6
+        }
+      },
+      "mentions": {
+        "sansMention": 71,
+        "assezBien": 21,
+        "bien": 7,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 29,
+        "pctFemmes": 60,
+        "pctAcademieOrigine": 93,
+        "pctNeoBacheliers": 70
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5190,7 +6406,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=18899&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0690539L&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690539L"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690539L",
+      "pressionCandidats": 10,
+      "nbCandidatsClasses": 207,
+      "totalPropositions": 147,
+      "admisFinPP": 16,
+      "pctAdmisFinPP": 80,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 41,
+          "admis": 7,
+          "tauxAcces": 33
+        },
+        "techno": {
+          "pct": 29,
+          "admis": 5,
+          "tauxAcces": 37
+        },
+        "pro": {
+          "pct": 29,
+          "admis": 5,
+          "tauxAcces": 30
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 47,
+        "assezBien": 47,
+        "bien": 6,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 18,
+        "pctFemmes": 55,
+        "pctAcademieOrigine": 53,
+        "pctNeoBacheliers": 85
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5264,7 +6518,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=21205&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0752846L&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0752846L"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0752846L",
+      "pressionCandidats": 73.2,
+      "nbCandidatsClasses": 894,
+      "totalPropositions": 121,
+      "admisFinPP": 16,
+      "pctAdmisFinPP": 73,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 16,
+          "admis": 3,
+          "tauxAcces": 28
+        },
+        "techno": {
+          "pct": 11,
+          "admis": 2,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 74,
+          "admis": 14,
+          "tauxAcces": 37
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 26,
+        "assezBien": 42,
+        "bien": 21,
+        "tresBien": 11
+      },
+      "diversite": {
+        "pctBoursiers": 26,
+        "pctFemmes": 64,
+        "pctAcademieOrigine": 37,
+        "pctNeoBacheliers": 86
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5338,7 +6630,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=28819&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0270044B&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0270044B"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0270044B",
+      "pressionCandidats": 14,
+      "nbCandidatsClasses": 216,
+      "totalPropositions": 92,
+      "admisFinPP": 9,
+      "pctAdmisFinPP": 56,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 13,
+          "admis": 2,
+          "tauxAcces": 28
+        },
+        "techno": {
+          "pct": 53,
+          "admis": 8,
+          "tauxAcces": 38
+        },
+        "pro": {
+          "pct": 33,
+          "admis": 5,
+          "tauxAcces": 34
+        },
+        "autres": {
+          "admis": 1
+        }
+      },
+      "mentions": {
+        "sansMention": 60,
+        "assezBien": 33,
+        "bien": 7,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 33,
+        "pctFemmes": 62,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 94
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5412,7 +6742,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=2901&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0141418R&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0141418R"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0141418R",
+      "pressionCandidats": 4.8,
+      "nbCandidatsClasses": 109,
+      "totalPropositions": 92,
+      "admisFinPP": 17,
+      "pctAdmisFinPP": 94,
+      "admisPhaseComplementaire": 2,
+      "profilBac": {
+        "general": {
+          "pct": 46,
+          "admis": 6,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 31,
+          "admis": 4,
+          "tauxAcces": 46
+        },
+        "pro": {
+          "pct": 23,
+          "admis": 3,
+          "tauxAcces": 23
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 69,
+        "assezBien": 31,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 15,
+        "pctFemmes": 56,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 72
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5486,7 +6854,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=3775&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0290013G&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0290013G"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0290013G",
+      "pressionCandidats": 20.1,
+      "nbCandidatsClasses": 386,
+      "totalPropositions": 234,
+      "admisFinPP": 33,
+      "pctAdmisFinPP": 97,
+      "admisPhaseComplementaire": 3,
+      "profilBac": {
+        "general": {
+          "pct": 33,
+          "admis": 9,
+          "tauxAcces": 37
+        },
+        "techno": {
+          "pct": 44,
+          "admis": 12,
+          "tauxAcces": 47
+        },
+        "pro": {
+          "pct": 22,
+          "admis": 6,
+          "tauxAcces": 17
+        },
+        "autres": {
+          "admis": 7
+        }
+      },
+      "mentions": {
+        "sansMention": 48,
+        "assezBien": 41,
+        "bien": 11,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 7,
+        "pctFemmes": 65,
+        "pctAcademieOrigine": 85,
+        "pctNeoBacheliers": 79
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5560,7 +6966,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=37943&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0781975Y&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0781975Y"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0781975Y",
+      "pressionCandidats": 5.1,
+      "nbCandidatsClasses": 80,
+      "totalPropositions": 88,
+      "admisFinPP": 10,
+      "pctAdmisFinPP": 100,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 2,
+          "tauxAcces": 35
+        },
+        "techno": {
+          "pct": 57,
+          "admis": 4,
+          "tauxAcces": 40
+        },
+        "pro": {
+          "pct": 14,
+          "admis": 1,
+          "tauxAcces": 25
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 57,
+        "assezBien": 29,
+        "bien": 14,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 0,
+        "pctFemmes": 60,
+        "pctAcademieOrigine": 57,
+        "pctNeoBacheliers": 70
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5634,7 +7078,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=41273&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0560117Y&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0560117Y"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0560117Y",
+      "pressionCandidats": 24.3,
+      "nbCandidatsClasses": 339,
+      "totalPropositions": 136,
+      "admisFinPP": 23,
+      "pctAdmisFinPP": 92,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 6,
+          "admis": 1,
+          "tauxAcces": 20
+        },
+        "techno": {
+          "pct": 62,
+          "admis": 10,
+          "tauxAcces": 32
+        },
+        "pro": {
+          "pct": 31,
+          "admis": 5,
+          "tauxAcces": 48
+        },
+        "autres": {
+          "admis": 9
+        }
+      },
+      "mentions": {
+        "sansMention": 19,
+        "assezBien": 69,
+        "bien": 12,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 25,
+        "pctFemmes": 80,
+        "pctAcademieOrigine": 94,
+        "pctNeoBacheliers": 64
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5708,7 +7190,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=7331&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0624430D&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0624430D"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0624430D",
+      "pressionCandidats": 17.8,
+      "nbCandidatsClasses": 583,
+      "totalPropositions": 152,
+      "admisFinPP": 22,
+      "pctAdmisFinPP": 81,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 48,
+          "admis": 12,
+          "tauxAcces": 33
+        },
+        "techno": {
+          "pct": 28,
+          "admis": 7,
+          "tauxAcces": 34
+        },
+        "pro": {
+          "pct": 24,
+          "admis": 6,
+          "tauxAcces": 33
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 56,
+        "assezBien": 36,
+        "bien": 4,
+        "tresBien": 4
+      },
+      "diversite": {
+        "pctBoursiers": 24,
+        "pctFemmes": 41,
+        "pctAcademieOrigine": 92,
+        "pctNeoBacheliers": 93
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5782,7 +7302,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9801&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0770930T&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0770930T"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0770930T",
+      "pressionCandidats": 24,
+      "nbCandidatsClasses": 388,
+      "totalPropositions": 168,
+      "admisFinPP": 27,
+      "pctAdmisFinPP": 96,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 22,
+          "admis": 5,
+          "tauxAcces": 30
+        },
+        "techno": {
+          "pct": 43,
+          "admis": 10,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 35,
+          "admis": 8,
+          "tauxAcces": 36
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 39,
+        "assezBien": 52,
+        "bien": 9,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 26,
+        "pctFemmes": 71,
+        "pctAcademieOrigine": 96,
+        "pctNeoBacheliers": 82
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5856,7 +7414,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=6258&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0540041B&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0540041B"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0540041B",
+      "pressionCandidats": 42.4,
+      "nbCandidatsClasses": 346,
+      "totalPropositions": 129,
+      "admisFinPP": 7,
+      "pctAdmisFinPP": 50,
+      "admisPhaseComplementaire": 7,
+      "profilBac": {
+        "general": {
+          "pct": 25,
+          "admis": 2,
+          "tauxAcces": 25
+        },
+        "techno": {
+          "pct": 75,
+          "admis": 6,
+          "tauxAcces": 37
+        },
+        "pro": {
+          "pct": 0,
+          "admis": 0,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 6
+        }
+      },
+      "mentions": {
+        "sansMention": 38,
+        "assezBien": 50,
+        "bien": 12,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 25,
+        "pctFemmes": 86,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 57
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -5930,7 +7526,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=11899&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=9740045F&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=9740045F"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=9740045F",
+      "pressionCandidats": 21.7,
+      "nbCandidatsClasses": 292,
+      "totalPropositions": 116,
+      "admisFinPP": 17,
+      "pctAdmisFinPP": 81,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 5,
+          "tauxAcces": 35
+        },
+        "techno": {
+          "pct": 41,
+          "admis": 7,
+          "tauxAcces": 38
+        },
+        "pro": {
+          "pct": 29,
+          "admis": 5,
+          "tauxAcces": 28
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 47,
+        "assezBien": 47,
+        "bien": 6,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 47,
+        "pctFemmes": 38,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 81
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6004,7 +7638,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=20127&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0260015A&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0260015A"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0260015A",
+      "pressionCandidats": 16.7,
+      "nbCandidatsClasses": 200,
+      "totalPropositions": 130,
+      "admisFinPP": 13,
+      "pctAdmisFinPP": 72,
+      "admisPhaseComplementaire": 4,
+      "profilBac": {
+        "general": {
+          "pct": 7,
+          "admis": 1,
+          "tauxAcces": 24
+        },
+        "techno": {
+          "pct": 57,
+          "admis": 8,
+          "tauxAcces": 46
+        },
+        "pro": {
+          "pct": 36,
+          "admis": 5,
+          "tauxAcces": 30
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 71,
+        "assezBien": 21,
+        "bien": 7,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 21,
+        "pctFemmes": 78,
+        "pctAcademieOrigine": 64,
+        "pctNeoBacheliers": 78
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6078,7 +7750,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=24670&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0140019V&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0140019V"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0140019V",
+      "pressionCandidats": 32.3,
+      "nbCandidatsClasses": 545,
+      "totalPropositions": 107,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 88,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 25,
+          "admis": 5,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 30,
+          "admis": 6,
+          "tauxAcces": 36
+        },
+        "pro": {
+          "pct": 45,
+          "admis": 9,
+          "tauxAcces": 33
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 30,
+        "assezBien": 35,
+        "bien": 30,
+        "tresBien": 5
+      },
+      "diversite": {
+        "pctBoursiers": 25,
+        "pctFemmes": 88,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 83
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6152,7 +7862,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=3577&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0251711Z&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0251711Z"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0251711Z",
+      "pressionCandidats": 38.3,
+      "nbCandidatsClasses": 534,
+      "totalPropositions": 111,
+      "admisFinPP": 18,
+      "pctAdmisFinPP": 95,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 4,
+          "tauxAcces": 34
+        },
+        "techno": {
+          "pct": 29,
+          "admis": 4,
+          "tauxAcces": 30
+        },
+        "pro": {
+          "pct": 43,
+          "admis": 6,
+          "tauxAcces": 36
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 43,
+        "assezBien": 36,
+        "bien": 14,
+        "tresBien": 7
+      },
+      "diversite": {
+        "pctBoursiers": 29,
+        "pctFemmes": 53,
+        "pctAcademieOrigine": 64,
+        "pctNeoBacheliers": 74
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6226,7 +7974,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=36197&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0910622G&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0910622G"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0910622G",
+      "pressionCandidats": 12.8,
+      "nbCandidatsClasses": 298,
+      "totalPropositions": 156,
+      "admisFinPP": 25,
+      "pctAdmisFinPP": 81,
+      "admisPhaseComplementaire": 2,
+      "profilBac": {
+        "general": {
+          "pct": 14,
+          "admis": 3,
+          "tauxAcces": 23
+        },
+        "techno": {
+          "pct": 57,
+          "admis": 12,
+          "tauxAcces": 41
+        },
+        "pro": {
+          "pct": 29,
+          "admis": 6,
+          "tauxAcces": 36
+        },
+        "autres": {
+          "admis": 10
+        }
+      },
+      "mentions": {
+        "sansMention": 76,
+        "assezBien": 19,
+        "bien": 5,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 38,
+        "pctFemmes": 48,
+        "pctAcademieOrigine": 71,
+        "pctNeoBacheliers": 68
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6300,7 +8086,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10502&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0850133H&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0850133H"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0850133H",
+      "pressionCandidats": 6.6,
+      "nbCandidatsClasses": 200,
+      "totalPropositions": 142,
+      "admisFinPP": 33,
+      "pctAdmisFinPP": 94,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 19,
+          "admis": 6,
+          "tauxAcces": 25
+        },
+        "techno": {
+          "pct": 52,
+          "admis": 16,
+          "tauxAcces": 48
+        },
+        "pro": {
+          "pct": 29,
+          "admis": 9,
+          "tauxAcces": 27
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 48,
+        "assezBien": 39,
+        "bien": 13,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 10,
+        "pctFemmes": 51,
+        "pctAcademieOrigine": 87,
+        "pctNeoBacheliers": 89
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6374,7 +8198,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=17649&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0010006B&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0010006B"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0010006B",
+      "pressionCandidats": 17.3,
+      "nbCandidatsClasses": 224,
+      "totalPropositions": 156,
+      "admisFinPP": 7,
+      "pctAdmisFinPP": 64,
+      "admisPhaseComplementaire": 3,
+      "profilBac": {
+        "general": {
+          "pct": 33,
+          "admis": 3,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 44,
+          "admis": 4,
+          "tauxAcces": 36
+        },
+        "pro": {
+          "pct": 22,
+          "admis": 2,
+          "tauxAcces": 33
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 67,
+        "assezBien": 22,
+        "bien": 11,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 22,
+        "pctFemmes": 55,
+        "pctAcademieOrigine": 56,
+        "pctNeoBacheliers": 82
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6448,7 +8310,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=23319&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=9740082W&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=9740082W"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=9740082W",
+      "pressionCandidats": 41.6,
+      "nbCandidatsClasses": 265,
+      "totalPropositions": 76,
+      "admisFinPP": 12,
+      "pctAdmisFinPP": 86,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 23,
+          "admis": 3,
+          "tauxAcces": 22
+        },
+        "techno": {
+          "pct": 31,
+          "admis": 4,
+          "tauxAcces": 38
+        },
+        "pro": {
+          "pct": 46,
+          "admis": 6,
+          "tauxAcces": 40
+        },
+        "autres": {
+          "admis": 1
+        }
+      },
+      "mentions": {
+        "sansMention": 31,
+        "assezBien": 54,
+        "bien": 15,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 69,
+        "pctFemmes": 50,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 93
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6522,7 +8422,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=7556&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0630020E&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0630020E"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0630020E",
+      "pressionCandidats": 24.8,
+      "nbCandidatsClasses": 650,
+      "totalPropositions": 213,
+      "admisFinPP": 26,
+      "pctAdmisFinPP": 79,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 42,
+          "admis": 10,
+          "tauxAcces": 32
+        },
+        "techno": {
+          "pct": 38,
+          "admis": 9,
+          "tauxAcces": 35
+        },
+        "pro": {
+          "pct": 21,
+          "admis": 5,
+          "tauxAcces": 33
+        },
+        "autres": {
+          "admis": 9
+        }
+      },
+      "mentions": {
+        "sansMention": 46,
+        "assezBien": 42,
+        "bien": 8,
+        "tresBien": 4
+      },
+      "diversite": {
+        "pctBoursiers": 46,
+        "pctFemmes": 73,
+        "pctAcademieOrigine": 67,
+        "pctNeoBacheliers": 73
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6596,7 +8534,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=8230&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0690042W&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690042W"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690042W",
+      "pressionCandidats": 62.6,
+      "nbCandidatsClasses": 919,
+      "totalPropositions": 327,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 75,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 7,
+          "tauxAcces": 27
+        },
+        "techno": {
+          "pct": 38,
+          "admis": 9,
+          "tauxAcces": 34
+        },
+        "pro": {
+          "pct": 33,
+          "admis": 8,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 25,
+        "assezBien": 58,
+        "bien": 12,
+        "tresBien": 4
+      },
+      "diversite": {
+        "pctBoursiers": 38,
+        "pctFemmes": 64,
+        "pctAcademieOrigine": 50,
+        "pctNeoBacheliers": 86
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6670,7 +8646,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9189&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0750715V&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0750715V"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0750715V",
+      "pressionCandidats": 77.7,
+      "nbCandidatsClasses": 1046,
+      "totalPropositions": 213,
+      "admisFinPP": 25,
+      "pctAdmisFinPP": 83,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 35,
+          "admis": 7,
+          "tauxAcces": 29
+        },
+        "techno": {
+          "pct": 35,
+          "admis": 7,
+          "tauxAcces": 33
+        },
+        "pro": {
+          "pct": 30,
+          "admis": 6,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 10
+        }
+      },
+      "mentions": {
+        "sansMention": 55,
+        "assezBien": 20,
+        "bien": 5,
+        "tresBien": 20
+      },
+      "diversite": {
+        "pctBoursiers": 60,
+        "pctFemmes": 47,
+        "pctAcademieOrigine": 30,
+        "pctNeoBacheliers": 67
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6744,7 +8758,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=36298&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0061715G&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0061715G"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0061715G",
+      "pressionCandidats": 17.6,
+      "nbCandidatsClasses": 487,
+      "totalPropositions": 226,
+      "admisFinPP": 11,
+      "pctAdmisFinPP": 65,
+      "admisPhaseComplementaire": 2,
+      "profilBac": {
+        "general": {
+          "pct": 67,
+          "admis": 10,
+          "tauxAcces": 42
+        },
+        "techno": {
+          "pct": 27,
+          "admis": 4,
+          "tauxAcces": 40
+        },
+        "pro": {
+          "pct": 7,
+          "admis": 1,
+          "tauxAcces": 18
+        },
+        "autres": {
+          "admis": 2
+        }
+      },
+      "mentions": {
+        "sansMention": 73,
+        "assezBien": 27,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 13,
+        "pctFemmes": 29,
+        "pctAcademieOrigine": 80,
+        "pctNeoBacheliers": 88
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6818,7 +8870,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=4770&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0351907H&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0351907H"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0351907H",
+      "pressionCandidats": 43.9,
+      "nbCandidatsClasses": 715,
+      "totalPropositions": 265,
+      "admisFinPP": 34,
+      "pctAdmisFinPP": 94,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 14,
+          "admis": 4,
+          "tauxAcces": 34
+        },
+        "techno": {
+          "pct": 62,
+          "admis": 18,
+          "tauxAcces": 40
+        },
+        "pro": {
+          "pct": 24,
+          "admis": 7,
+          "tauxAcces": 25
+        },
+        "autres": {
+          "admis": 7
+        }
+      },
+      "mentions": {
+        "sansMention": 34,
+        "assezBien": 55,
+        "bien": 10,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 21,
+        "pctFemmes": 72,
+        "pctAcademieOrigine": 83,
+        "pctNeoBacheliers": 81
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6892,7 +8982,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=6724&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0590034S&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0590034S"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0590034S",
+      "pressionCandidats": 17.6,
+      "nbCandidatsClasses": 249,
+      "totalPropositions": 90,
+      "admisFinPP": 25,
+      "pctAdmisFinPP": 100,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 48,
+          "admis": 10,
+          "tauxAcces": 32
+        },
+        "techno": {
+          "pct": 29,
+          "admis": 6,
+          "tauxAcces": 31
+        },
+        "pro": {
+          "pct": 24,
+          "admis": 5,
+          "tauxAcces": 37
+        },
+        "autres": {
+          "admis": 4
+        }
+      },
+      "mentions": {
+        "sansMention": 48,
+        "assezBien": 38,
+        "bien": 14,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 43,
+        "pctFemmes": 76,
+        "pctAcademieOrigine": 90,
+        "pctNeoBacheliers": 84
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -6966,7 +9094,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=7360&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0620062F&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0620062F"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0620062F",
+      "pressionCandidats": 10.1,
+      "nbCandidatsClasses": 312,
+      "totalPropositions": 176,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 68,
+      "admisPhaseComplementaire": 4,
+      "profilBac": {
+        "general": {
+          "pct": 46,
+          "admis": 13,
+          "tauxAcces": 37
+        },
+        "techno": {
+          "pct": 29,
+          "admis": 8,
+          "tauxAcces": 36
+        },
+        "pro": {
+          "pct": 25,
+          "admis": 7,
+          "tauxAcces": 27
+        },
+        "autres": {
+          "admis": 3
+        }
+      },
+      "mentions": {
+        "sansMention": 50,
+        "assezBien": 32,
+        "bien": 11,
+        "tresBien": 7
+      },
+      "diversite": {
+        "pctBoursiers": 39,
+        "pctFemmes": 65,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 90
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -7040,7 +9206,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=10249&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0801882L&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0801882L"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0801882L",
+      "pressionCandidats": 20,
+      "nbCandidatsClasses": 635,
+      "totalPropositions": 188,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 66,
+      "admisPhaseComplementaire": 1,
+      "profilBac": {
+        "general": {
+          "pct": 39,
+          "admis": 7,
+          "tauxAcces": 34
+        },
+        "techno": {
+          "pct": 33,
+          "admis": 6,
+          "tauxAcces": 40
+        },
+        "pro": {
+          "pct": 28,
+          "admis": 5,
+          "tauxAcces": 26
+        },
+        "autres": {
+          "admis": 14
+        }
+      },
+      "mentions": {
+        "sansMention": 56,
+        "assezBien": 17,
+        "bien": 22,
+        "tresBien": 6
+      },
+      "diversite": {
+        "pctBoursiers": 33,
+        "pctFemmes": 59,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 56
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -7114,7 +9318,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=8176&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0681882B&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0681882B"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0681882B",
+      "pressionCandidats": 19.5,
+      "nbCandidatsClasses": 556,
+      "totalPropositions": 261,
+      "admisFinPP": 14,
+      "pctAdmisFinPP": 64,
+      "admisPhaseComplementaire": 4,
+      "profilBac": {
+        "general": {
+          "pct": 29,
+          "admis": 5,
+          "tauxAcces": 28
+        },
+        "techno": {
+          "pct": 41,
+          "admis": 7,
+          "tauxAcces": 33
+        },
+        "pro": {
+          "pct": 29,
+          "admis": 5,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 71,
+        "assezBien": 29,
+        "bien": 0,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 35,
+        "pctFemmes": 59,
+        "pctAcademieOrigine": 94,
+        "pctNeoBacheliers": 77
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -7188,7 +9430,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=8180&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0690023A&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690023A"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0690023A",
+      "pressionCandidats": 67.5,
+      "nbCandidatsClasses": 903,
+      "totalPropositions": 260,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 70,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 27,
+          "admis": 6,
+          "tauxAcces": 26
+        },
+        "techno": {
+          "pct": 32,
+          "admis": 7,
+          "tauxAcces": 36
+        },
+        "pro": {
+          "pct": 41,
+          "admis": 9,
+          "tauxAcces": 38
+        },
+        "autres": {
+          "admis": 8
+        }
+      },
+      "mentions": {
+        "sansMention": 36,
+        "assezBien": 36,
+        "bien": 23,
+        "tresBien": 5
+      },
+      "diversite": {
+        "pctBoursiers": 36,
+        "pctFemmes": 77,
+        "pctAcademieOrigine": 55,
+        "pctNeoBacheliers": 73
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -7262,7 +9542,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9886&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0772310T&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0772310T"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0772310T",
+      "pressionCandidats": 22.9,
+      "nbCandidatsClasses": 457,
+      "totalPropositions": 136,
+      "admisFinPP": 20,
+      "pctAdmisFinPP": 87,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 25,
+          "admis": 4,
+          "tauxAcces": 31
+        },
+        "techno": {
+          "pct": 38,
+          "admis": 6,
+          "tauxAcces": 34
+        },
+        "pro": {
+          "pct": 38,
+          "admis": 6,
+          "tauxAcces": 34
+        },
+        "autres": {
+          "admis": 7
+        }
+      },
+      "mentions": {
+        "sansMention": 56,
+        "assezBien": 38,
+        "bien": 6,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 31,
+        "pctFemmes": 43,
+        "pctAcademieOrigine": 100,
+        "pctNeoBacheliers": 70
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
@@ -7336,7 +9654,45 @@ export const SCHOOLS_DATA = [
       "procedure": "Vœu sur la plateforme nationale Parcoursup",
       "parcoursupUrl": "https://dossierappel.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=9967&typeBac=0&originePc=0",
       "openDataUrl": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/table/?refine.cod_uai=0781297L&refine.fili=BTS",
-      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0781297L"
+      "openDataSearchUrl": "https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?refine.fili=BTS&q=0781297L",
+      "pressionCandidats": 18.5,
+      "nbCandidatsClasses": 344,
+      "totalPropositions": 186,
+      "admisFinPP": 21,
+      "pctAdmisFinPP": 95,
+      "admisPhaseComplementaire": 0,
+      "profilBac": {
+        "general": {
+          "pct": 24,
+          "admis": 4,
+          "tauxAcces": 33
+        },
+        "techno": {
+          "pct": 41,
+          "admis": 7,
+          "tauxAcces": 33
+        },
+        "pro": {
+          "pct": 35,
+          "admis": 6,
+          "tauxAcces": 34
+        },
+        "autres": {
+          "admis": 5
+        }
+      },
+      "mentions": {
+        "sansMention": 53,
+        "assezBien": 35,
+        "bien": 12,
+        "tresBien": 0
+      },
+      "diversite": {
+        "pctBoursiers": 18,
+        "pctFemmes": 36,
+        "pctAcademieOrigine": 94,
+        "pctNeoBacheliers": 77
+      }
     },
     "tauxElearning": 10,
     "datePortesOuvertes": "Samedi 31 Janvier 2026 de 9h00 à 13h00",
