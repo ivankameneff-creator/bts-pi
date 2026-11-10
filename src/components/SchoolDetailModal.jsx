@@ -22,10 +22,13 @@ import {
   ChevronRight, 
   ExternalLink, 
   Info,
-  TrendingUp
+  TrendingUp,
+  MessageSquare,
+  ArrowRight
 } from 'lucide-react';
 import { THOTIS_SOURCE_URL, PARCOURSUP_SOURCE_URL } from '../data/schoolsData';
 import { ParcoursupBilanCard } from './ParcoursupBilanCard';
+import { InterviewPrepModal } from './InterviewPrepModal';
 
 export function SchoolDetailModal({ 
   school, 
@@ -36,6 +39,7 @@ export function SchoolDetailModal({
 }) {
   const [activeTab, setActiveTab] = useState('overview'); // 'overview' | 'reviews' | 'contact'
   const [copiedLink, setCopiedLink] = useState(false);
+  const [isInterviewModalOpen, setIsInterviewModalOpen] = useState(false);
 
   if (!school) return null;
 
@@ -323,6 +327,35 @@ END:VCALENDAR`;
                 </div>
               )}
 
+              {/* Bannière interactive de préparation aux entretiens */}
+              <div className="bg-gradient-to-r from-cyan-950/40 via-slate-900 to-indigo-950/40 border border-cyan-500/30 rounded-2xl p-4.5 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-lg shadow-cyan-950/20">
+                <div className="flex items-start sm:items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-300 shrink-0 mt-0.5 sm:mt-0">
+                    <MessageSquare className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                      <span>Préparez votre entretien d'admission & JPO</span>
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                        Nouveau
+                      </span>
+                    </h4>
+                    <p className="text-xs text-slate-300 mt-0.5">
+                      Questions posées par le jury, conseils de réponse et questions stratégiques à poser à l'école.
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setIsInterviewModalOpen(true)}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all shrink-0 shadow-md shadow-cyan-500/20"
+                >
+                  <span>Questions d'entretien</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+
               {/* Description */}
               <div className="bg-slate-950/40 p-5 rounded-2xl border border-slate-800/80">
                 <h4 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-2">
@@ -559,14 +592,25 @@ END:VCALENDAR`;
 
         </div>
 
-        {/* Modal Footer with Call to Action (Lettre de Motivation) */}
+        {/* Modal Footer with Call to Action (Lettre de Motivation & Entretien) */}
         <div className="p-4 sm:p-5 bg-slate-950 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
           <div className="text-xs text-slate-400 text-center sm:text-left">
             Prêt à postuler pour la rentrée 2026/2027 ?
           </div>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
             <button
+              type="button"
+              onClick={() => setIsInterviewModalOpen(true)}
+              className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-200 border border-cyan-500/40 transition-all shadow-md shadow-cyan-500/10"
+              title="Récupérer les questions pour préparer votre entretien d'admission"
+            >
+              <MessageSquare className="w-4 h-4 text-cyan-400" />
+              <span>Questions d'entretien</span>
+            </button>
+
+            <button
+              type="button"
               onClick={() => {
                 onClose();
                 onGenerateLetter(school);
@@ -580,6 +624,14 @@ END:VCALENDAR`;
         </div>
 
       </div>
+
+      {/* Modal Préparation d'Entretien */}
+      {isInterviewModalOpen && (
+        <InterviewPrepModal
+          school={school}
+          onClose={() => setIsInterviewModalOpen(false)}
+        />
+      )}
     </div>
   );
 }
