@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { SCHOOLS_DATA, ACADEMIES, PARCOURSUP_SOURCE_URL, THOTIS_SOURCE_URL } from './data/schoolsData';
+import { ACADEMIES, PARCOURSUP_SOURCE_URL, THOTIS_SOURCE_URL } from './data/schoolsData';
 import { getInitialSchools, fetchSchoolsFromDatabase, saveNewSchool } from './services/schoolsService';
 import { Navbar } from './components/Navbar';
 import { InteractiveMap } from './components/InteractiveMap';
@@ -10,87 +10,77 @@ import { CoverLetterModal } from './components/CoverLetterModal';
 import { AddSchoolModal } from './components/AddSchoolModal';
 import { FavoritesModal } from './components/FavoritesModal';
 import { BtsPiGuideModal } from './components/BtsPiGuideModal';
+import { InterviewPrepPage } from './components/InterviewPrepPage';
 import { StatsBanner } from './components/StatsBanner';
 import { Footer } from './components/Footer';
-import { 
-  Building2, 
-  MapPin, 
-  Filter, 
-  SlidersHorizontal, 
-  LayoutGrid, 
-  Table as TableIcon, 
-  GraduationCap, 
-  CheckCircle, 
-  Sparkles, 
+import {
+  SlidersHorizontal,
+  LayoutGrid,
+  Table as TableIcon,
   RotateCcw,
-  Search,
-  ArrowRight,
   School,
-  FileEdit,
-  Award,
   ExternalLink,
   TrendingUp,
-  BarChart3,
+  MessageSquare,
   X
 } from 'lucide-react';
 
 export default function App() {
-  // Database State with smart merge of built-in schools and custom added ones
   const [schools, setSchools] = useState(() => getInitialSchools());
-  const [dataSource, setDataSource] = useState('static'); // 'static' | 'supabase'
+  const [, setDataSource] = useState('static');
 
-  // Fetch distant schools from database in background
   useEffect(() => {
     let isMounted = true;
-    fetchSchoolsFromDatabase().then(res => {
+    fetchSchoolsFromDatabase().then((res) => {
       if (isMounted && res && res.schools) {
         setSchools(res.schools);
         setDataSource(res.source);
       }
     });
-    return () => { isMounted = false; };
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
-  // Favorites state
   const [favorites, setFavorites] = useState(() => {
     try {
       const saved = localStorage.getItem('bts_pi_favorites');
       return saved ? JSON.parse(saved) : [];
-    } catch (e) {
+    } catch {
       return [];
     }
   });
 
-  // Navigation & View state: 'home' | 'cards' | 'table'
+  // Navigation : 'home' | 'cards' | 'table' | 'interview'
   const [activeView, setActiveView] = useState('home');
+  const [interviewTargetSchoolId, setInterviewTargetSchoolId] = useState('');
 
-  // Filters
+  // Filtres
   const [selectedAcademy, setSelectedAcademy] = useState('all');
-  const [selectedType, setSelectedType] = useState('all'); // 'all' | 'Public' | 'Privé sous contrat' | 'Privé hors contrat'
-  const [selectedAlternance, setSelectedAlternance] = useState('all'); // 'all' | 'oui' | 'non'
+  const [selectedType, setSelectedType] = useState('all');
+  const [selectedAlternance, setSelectedAlternance] = useState('all');
   const [minSuccessRate, setMinSuccessRate] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('parcoursup_demandes'); // 'parcoursup_demandes' | 'parcoursup_selectivite' | 'reussite' | 'avis' | 'nom' | 'thotis'
+  const [sortBy, setSortBy] = useState('parcoursup_demandes');
 
-  // Modals state
+  // Modals
   const [detailSchool, setDetailSchool] = useState(null);
   const [letterSchool, setLetterSchool] = useState(null);
   const [isAddSchoolOpen, setIsAddSchoolOpen] = useState(false);
   const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
   const [isGuideOpen, setIsGuideOpen] = useState(false);
 
-  // Sync favorites
   useEffect(() => {
     try {
       localStorage.setItem('bts_pi_favorites', JSON.stringify(favorites));
-    } catch (e) {}
+    } catch {
+      // ignore
+    }
   }, [favorites]);
 
   const toggleFavorite = (schoolId) => {
-    setFavorites(prev => 
-      prev.includes(schoolId) 
-        ? prev.filter(id => id !== schoolId) 
-        : [...prev, schoolId]
+    setFavorites((prev) =>
+      prev.includes(schoolId) ? prev.filter((id) => id !== schoolId) : [...prev, schoolId]
     );
   };
 
@@ -98,72 +88,76 @@ export default function App() {
 
   const handleAddSchool = (newSchool) => {
     saveNewSchool(newSchool);
-    setSchools(prev => [newSchool, ...prev.filter(s => s.id !== newSchool.id)]);
+    setSchools((prev) => [newSchool, ...prev.filter((s) => s.id !== newSchool.id)]);
   };
 
-  // Filter & Search Logic
+  const openInterviewPageForSchool = (school) => {
+    if (school?.id) {
+      setFavorites((prev) => (prev.includes(school.id) ? prev : [...prev, school.id]));
+      setInterviewTargetSchoolId(school.id);
+    }
+    setActiveView('interview');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const filteredSchools = useMemo(() => {
-    return schools.filter(school => {
-      // Académie filter
-      if (selectedAcademy !== 'all') {
-        if (selectedAcademy === 'sud-ouest') {
-          if (!['Toulouse', 'Bordeaux', 'Montpellier', 'Poitiers'].includes(school.academie)) {
+    return schools
+      .filter((school) => {
+        if (selectedAcademy !== 'all') {
+          if (selectedAcademy === 'sud-ouest') {
+            if (!['Toulouse', 'Bordeaux', 'Montpellier', 'Poitiers'].includes(school.academie)) {
+              return false;
+            }
+          } else if (school.academie !== selectedAcademy) {
             return false;
           }
-        } else if (school.academie !== selectedAcademy) {
-          return false;
         }
-      }
 
-      // Type filter
-      if (selectedType !== 'all') {
-        if (selectedType === 'Public' && !school.type.toLowerCase().includes('public')) return false;
-        if (selectedType === 'PriveSousContrat' && !school.type.toLowerCase().includes('sous contrat')) return false;
-        if (selectedType === 'PriveHorsContrat' && !school.type.toLowerCase().includes('hors contrat')) return false;
-      }
+        if (selectedType !== 'all') {
+          if (selectedType === 'Public' && !school.type.toLowerCase().includes('public')) return false;
+          if (selectedType === 'PriveSousContrat' && !school.type.toLowerCase().includes('sous contrat')) return false;
+          if (selectedType === 'PriveHorsContrat' && !school.type.toLowerCase().includes('hors contrat')) return false;
+        }
 
-      // Alternance filter
-      if (selectedAlternance === 'oui' && !school.alternancePossible) return false;
-      if (selectedAlternance === 'non' && school.alternancePossible) return false;
+        if (selectedAlternance === 'oui' && !school.alternancePossible) return false;
+        if (selectedAlternance === 'non' && school.alternancePossible) return false;
 
-      // Min success rate
-      if (minSuccessRate > 0 && school.tauxReussite < minSuccessRate) return false;
+        if (minSuccessRate > 0 && school.tauxReussite < minSuccessRate) return false;
 
-      // Text query
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase().trim();
-        const matchName = school.nom.toLowerCase().includes(q);
-        const matchVille = school.ville.toLowerCase().includes(q);
-        const matchAcad = school.academie.toLowerCase().includes(q);
-        const matchAdresse = school.adresse.toLowerCase().includes(q);
-        if (!matchName && !matchVille && !matchAcad && !matchAdresse) return false;
-      }
+        if (searchQuery.trim()) {
+          const q = searchQuery.toLowerCase().trim();
+          const matchName = school.nom.toLowerCase().includes(q);
+          const matchVille = school.ville.toLowerCase().includes(q);
+          const matchAcad = school.academie.toLowerCase().includes(q);
+          const matchAdresse = school.adresse.toLowerCase().includes(q);
+          if (!matchName && !matchVille && !matchAcad && !matchAdresse) return false;
+        }
 
-      return true;
-    }).sort((a, b) => {
-      if (sortBy === 'parcoursup_demandes') {
-        const aDem = a.parcoursup?.demandes != null ? a.parcoursup.demandes : -1;
-        const bDem = b.parcoursup?.demandes != null ? b.parcoursup.demandes : -1;
-        return bDem - aDem;
-      }
-      if (sortBy === 'parcoursup_selectivite') {
-        const aTaux = a.parcoursup?.tauxAcces != null ? a.parcoursup.tauxAcces : 999;
-        const bTaux = b.parcoursup?.tauxAcces != null ? b.parcoursup.tauxAcces : 999;
-        return aTaux - bTaux;
-      }
-      if (sortBy === 'thotis') {
-        const aRank = a.classementThotis != null ? a.classementThotis : 999999;
-        const bRank = b.classementThotis != null ? b.classementThotis : 999999;
-        return aRank - bRank;
-      }
-      if (sortBy === 'reussite') return b.tauxReussite - a.tauxReussite;
-      if (sortBy === 'avis') return b.avis.note - a.avis.note;
-      if (sortBy === 'nom') return a.nom.localeCompare(b.nom);
-      return 0;
-    });
+        return true;
+      })
+      .sort((a, b) => {
+        if (sortBy === 'parcoursup_demandes') {
+          const aDem = a.parcoursup?.demandes != null ? a.parcoursup.demandes : -1;
+          const bDem = b.parcoursup?.demandes != null ? b.parcoursup.demandes : -1;
+          return bDem - aDem;
+        }
+        if (sortBy === 'parcoursup_selectivite') {
+          const aTaux = a.parcoursup?.tauxAcces != null ? a.parcoursup.tauxAcces : 999;
+          const bTaux = b.parcoursup?.tauxAcces != null ? b.parcoursup.tauxAcces : 999;
+          return aTaux - bTaux;
+        }
+        if (sortBy === 'thotis') {
+          const aRank = a.classementThotis != null ? a.classementThotis : 999999;
+          const bRank = b.classementThotis != null ? b.classementThotis : 999999;
+          return aRank - bRank;
+        }
+        if (sortBy === 'reussite') return b.tauxReussite - a.tauxReussite;
+        if (sortBy === 'avis') return b.avis.note - a.avis.note;
+        if (sortBy === 'nom') return a.nom.localeCompare(b.nom);
+        return 0;
+      });
   }, [schools, selectedAcademy, selectedType, selectedAlternance, minSuccessRate, searchQuery, sortBy]);
 
-  // When user clicks an academy on home view, navigate to the "Gros boutons" cards view
   const handleSelectAcademyFromMap = (acadId) => {
     setSelectedAcademy(acadId);
     setActiveView('cards');
@@ -179,30 +173,37 @@ export default function App() {
     setSortBy('parcoursup_demandes');
   };
 
-  const hasActiveFilters = selectedAcademy !== 'all' || selectedType !== 'all' || selectedAlternance !== 'all' || minSuccessRate > 0 || searchQuery.trim() !== '';
+  const hasActiveFilters =
+    selectedAcademy !== 'all' ||
+    selectedType !== 'all' ||
+    selectedAlternance !== 'all' ||
+    minSuccessRate > 0 ||
+    searchQuery.trim() !== '';
 
-  // Key metrics calculation
   const totalSchools = schools.length;
-  const publicCount = schools.filter(s => s.type.toLowerCase().includes('public')).length;
+  const publicCount = schools.filter((s) => s.type.toLowerCase().includes('public')).length;
   const privateCount = totalSchools - publicCount;
   const averagePassRate = Math.round(
     schools.reduce((acc, curr) => acc + curr.tauxReussite, 0) / (totalSchools || 1)
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#060a12] text-slate-100 relative overflow-x-hidden selection:bg-emerald-500 selection:text-slate-950 font-sans">
-      
-      {/* Ambient background glows */}
-      <div className="fixed inset-0 bg-radial-vignette pointer-events-none opacity-40 z-0" />
-      <div className="fixed -top-40 -left-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="fixed top-1/3 -right-40 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[150px] pointer-events-none z-0" />
-      <div className="fixed bottom-10 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[160px] pointer-events-none z-0" />
+    <div className="min-h-screen flex flex-col bg-[#070b14] text-slate-100 relative overflow-x-hidden selection:bg-emerald-400 selection:text-slate-950 font-sans">
+      {/* Toile de fond lumineuse épurée pour révéler l'effet verre dépoli */}
+      <div className="fixed inset-0 bg-grid-pattern opacity-45 pointer-events-none z-0" />
+      <div className="fixed inset-0 bg-radial-vignette pointer-events-none z-0" />
+      <div className="fixed -top-48 left-1/4 w-[520px] h-[520px] bg-emerald-400/[0.08] rounded-full blur-[150px] pointer-events-none z-0" />
+      <div className="fixed top-1/3 -right-48 w-[540px] h-[540px] bg-sky-400/[0.07] rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="fixed bottom-0 left-10 w-[460px] h-[460px] bg-indigo-400/[0.06] rounded-full blur-[150px] pointer-events-none z-0" />
 
-      {/* Navbar */}
+      {/* Barre de navigation flottante */}
       <div className="relative z-30">
-        <Navbar 
+        <Navbar
           activeView={activeView}
-          setActiveView={setActiveView}
+          setActiveView={(view) => {
+            setActiveView(view);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
           favoritesCount={favorites.length}
           onOpenFavorites={() => setIsFavoritesOpen(true)}
           onOpenAddSchool={() => setIsAddSchoolOpen(true)}
@@ -210,374 +211,386 @@ export default function App() {
           searchQuery={searchQuery}
           setSearchQuery={(q) => {
             setSearchQuery(q);
-            if (q && activeView === 'home') setActiveView('cards');
+            if (q && (activeView === 'home' || activeView === 'interview')) {
+              setActiveView('cards');
+            }
           }}
           selectedAcademy={selectedAcademy}
           onSelectAcademy={setSelectedAcademy}
         />
       </div>
 
-      {/* Main Container */}
+      {/* Contenu principal */}
       <main className="relative z-10 flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
-        
-        {/* ========================================================= */}
-        {/* HERO SECTION (Shown in Home View) */}
-        {/* ========================================================= */}
-        {activeView === 'home' && (
-          <div className="relative rounded-3xl overflow-hidden p-7 sm:p-12 border border-slate-800/90 bg-gradient-to-br from-slate-900/90 via-[#090e1c]/90 to-slate-900/90 backdrop-blur-2xl shadow-2xl ring-1 ring-white/5">
-            {/* Background glowing ambient orbs */}
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none" />
+        {activeView === 'interview' ? (
+          /* =============================================================== */
+          /* PAGE DÉDIÉE : PRÉPARATION DE MON ENTRETIEN ÉCOLE (AVEC PDF)     */
+          /* =============================================================== */
+          <InterviewPrepPage
+            key={interviewTargetSchoolId || 'general'}
+            schools={schools}
+            favorites={favorites}
+            initialSchoolId={interviewTargetSchoolId}
+            onBackHome={() => setActiveView('home')}
+            onBrowseSchools={() => setActiveView('cards')}
+            onOpenSchoolDetail={(s) => setDetailSchool(s)}
+          />
+        ) : (
+          <>
+            {/* ============================================================= */}
+            {/* HERO ÉPURÉ GLASSY (Vue Accueil)                               */}
+            {/* ============================================================= */}
+            {activeView === 'home' && (
+              <div className="relative rounded-3xl overflow-hidden p-7 sm:p-11 glass-surface">
+                <div className="absolute -top-28 -right-24 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-28 -left-24 w-96 h-96 bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/25 tracking-wide">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Base Nationale 2026 • Données Officielles MESR Parcoursup</span>
-              </div>
+                <div className="relative z-10 max-w-3xl space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium glass-pill text-emerald-200">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <span>Répertoire National 2026 • Open Data MESR Parcoursup</span>
+                  </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] font-heading">
-                Trouvez votre école de <br className="hidden sm:inline" />
-                <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
-                  BTS Professions Immobilières
-                </span>
-              </h1>
+                  <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
+                    Trouvez votre école de <br className="hidden sm:inline" />
+                    <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-sky-300 bg-clip-text text-transparent">
+                      BTS Professions Immobilières
+                    </span>
+                  </h1>
 
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-                Explorez la carte interactive de France par académie et ville. Comparez les <strong>données officielles Parcoursup (demandes et admis)</strong>, les taux de réussite, les rythmes d'alternance et générez votre <strong>lettre de motivation personnalisée</strong> en un clic.
-              </p>
-
-              {/* Quick Action Badges */}
-              <div className="pt-2 flex flex-wrap items-center gap-2.5">
-                <button
-                  onClick={() => { setSelectedAcademy('sud-ouest'); setActiveView('cards'); }}
-                  className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-teal-500/15 text-teal-300 hover:bg-teal-500/25 border border-teal-500/30 transition-all inline-flex items-center gap-1.5 shadow-sm hover:scale-105"
-                >
-                  🌊 Grand Sud-Ouest (45 écoles)
-                </button>
-                <button
-                  onClick={() => { setSelectedType('Public'); setActiveView('cards'); }}
-                  className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-emerald-300 hover:bg-emerald-500/20 border border-slate-700 transition-all hover:scale-105"
-                >
-                  🏛️ Écoles Publiques (Gratuit)
-                </button>
-                <button
-                  onClick={() => { setSelectedAlternance('oui'); setActiveView('cards'); }}
-                  className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-cyan-300 hover:bg-cyan-500/20 border border-slate-700 transition-all hover:scale-105"
-                >
-                  ⚡ Cursus en Alternance
-                </button>
-                <button
-                  onClick={() => { setMinSuccessRate(90); setActiveView('cards'); }}
-                  className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-amber-300 hover:bg-amber-500/20 border border-slate-700 transition-all hover:scale-105"
-                >
-                  🏆 Top Réussite &gt; 90%
-                </button>
-                <button
-                  onClick={() => setIsGuideOpen(true)}
-                  className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-slate-300 hover:text-white border border-slate-700 transition-all hover:scale-105"
-                >
-                  📖 Guide du diplôme
-                </button>
-                <a
-                  href={PARCOURSUP_SOURCE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-cyan-500/15 text-cyan-300 hover:bg-cyan-500/25 border border-cyan-500/30 transition-all inline-flex items-center gap-1.5 shadow-sm hover:scale-105"
-                  title="Consulter les données officielles Parcoursup Open Data sur data.enseignementsup-recherche.gouv.fr (nouvel onglet)"
-                >
-                  <TrendingUp className="w-3.5 h-3.5 text-cyan-400" />
-                  <span>Données Parcoursup Officielles</span>
-                  <ExternalLink className="w-3 h-3 text-cyan-300 opacity-80" />
-                </a>
-              </div>
-            </div>
-
-            {/* KPI Stats */}
-            <StatsBanner 
-              totalSchools={totalSchools}
-              publicCount={publicCount}
-              privateCount={privateCount}
-              averagePassRate={averagePassRate}
-            />
-          </div>
-        )}
-
-        {/* ========================================================= */}
-        {/* INTERACTIVE MAP (On Home View) */}
-        {/* ========================================================= */}
-        {activeView === 'home' && (
-          <section className="space-y-4">
-            <InteractiveMap 
-              schools={schools}
-              onSelectSchool={(school) => setDetailSchool(school)}
-              onSelectAcademy={handleSelectAcademyFromMap}
-              selectedAcademy={selectedAcademy}
-            />
-          </section>
-        )}
-
-        {/* ========================================================= */}
-        {/* FILTER BAR & VIEW TOGGLE (Always available in cards/table) */}
-        {/* ========================================================= */}
-        <section className="space-y-6">
-          
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-800/80">
-            <div>
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  <School className="w-5 h-5" />
-                </div>
-                <div>
-                  <h2 className="text-xl sm:text-2xl font-black text-white font-heading">
-                    {selectedAcademy === 'all' 
-                      ? "Toutes les écoles de BTS Professions Immobilières" 
-                      : selectedAcademy === 'sud-ouest'
-                        ? "Écoles du Grand Sud-Ouest"
-                        : `Écoles - Académie de ${selectedAcademy}`
-                    }
-                  </h2>
-                  <p className="text-xs text-slate-400 mt-0.5">
-                    Cliquez sur une école pour afficher sa fiche complète ou générer une lettre de motivation ciblée.
+                  <p className="text-sm sm:text-base text-slate-300/90 leading-relaxed max-w-2xl">
+                    Comparez en toute clarté les 102 établissements de France : bilans officiels Parcoursup, taux de réussite, alternance, lettres de motivation et guide complet d'entretien téléchargeable en PDF.
                   </p>
-                </div>
-                <span className="text-xs font-bold bg-emerald-500/15 text-emerald-300 px-3 py-1 rounded-full border border-emerald-500/30 shrink-0 self-start sm:self-center">
-                  {filteredSchools.length} école{filteredSchools.length > 1 ? 's' : ''}
-                </span>
-              </div>
-            </div>
 
-            {/* View Mode Switcher: Cards vs Table */}
-            <div className="flex items-center gap-1.5 bg-[#080d1a] p-1.5 rounded-2xl border border-slate-800 self-start sm:self-auto shadow-inner">
-              <button
-                onClick={() => setActiveView('cards')}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  activeView === 'cards' || activeView === 'home'
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 shadow-md shadow-emerald-500/20 font-extrabold'
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <LayoutGrid className="w-3.5 h-3.5" />
-                <span>Grandes Fiches (Boutons)</span>
-              </button>
+                  {/* Raccourcis épurés en capsules de verre */}
+                  <div className="pt-2 flex flex-wrap items-center gap-2">
+                    <button
+                      onClick={() => {
+                        setInterviewTargetSchoolId('');
+                        setActiveView('interview');
+                      }}
+                      className="px-4 py-2 rounded-full text-xs font-semibold bg-white text-slate-950 hover:bg-emerald-200 transition-all inline-flex items-center gap-1.5 shadow-sm cursor-pointer"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>Préparation de mon entretien école (PDF)</span>
+                    </button>
 
-              <button
-                onClick={() => setActiveView('table')}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  activeView === 'table'
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 shadow-md shadow-emerald-500/20 font-extrabold'
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <TableIcon className="w-3.5 h-3.5" />
-                <span>Tableau Comparatif</span>
-              </button>
-            </div>
-          </div>
+                    <button
+                      onClick={() => {
+                        setSelectedAcademy('sud-ouest');
+                        setActiveView('cards');
+                      }}
+                      className="px-3.5 py-2 rounded-full text-xs font-medium glass-pill text-slate-200 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
+                    >
+                      Grand Sud-Ouest (45)
+                    </button>
 
-          {/* Interactive Filters Grid */}
-          <div className="bg-[#080d1a]/80 backdrop-blur-xl p-5 sm:p-6 rounded-3xl border border-slate-800/90 shadow-2xl space-y-4">
-            <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
-              <span className="flex items-center gap-2 text-emerald-400">
-                <SlidersHorizontal className="w-4 h-4" />
-                <span>Filtres & Affinage</span>
-              </span>
-              
-              {hasActiveFilters && (
-                <button
-                  onClick={handleResetFilters}
-                  className="flex items-center gap-1.5 text-xs text-rose-400 hover:text-rose-300 transition-colors capitalize font-semibold bg-rose-500/10 px-2.5 py-1 rounded-lg border border-rose-500/20"
-                >
-                  <RotateCcw className="w-3 h-3" />
-                  Réinitialiser tous les filtres
-                </button>
-              )}
-            </div>
+                    <button
+                      onClick={() => {
+                        setSelectedType('Public');
+                        setActiveView('cards');
+                      }}
+                      className="px-3.5 py-2 rounded-full text-xs font-medium glass-pill text-slate-200 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
+                    >
+                      Écoles publiques
+                    </button>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-xs">
-              
-              {/* Académie */}
-              <div>
-                <label className="block text-slate-400 mb-1.5 font-semibold">Académie / Région</label>
-                <select
-                  value={selectedAcademy}
-                  onChange={(e) => setSelectedAcademy(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 transition-all font-medium"
-                >
-                  {ACADEMIES.map(a => (
-                    <option key={a.id} value={a.id}>{a.nom}</option>
-                  ))}
-                </select>
-              </div>
+                    <button
+                      onClick={() => {
+                        setSelectedAlternance('oui');
+                        setActiveView('cards');
+                      }}
+                      className="px-3.5 py-2 rounded-full text-xs font-medium glass-pill text-slate-200 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
+                    >
+                      Alternance
+                    </button>
 
-              {/* Statut */}
-              <div>
-                <label className="block text-slate-400 mb-1.5 font-semibold">Statut de l'école</label>
-                <select
-                  value={selectedType}
-                  onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 transition-all font-medium"
-                >
-                  <option value="all">Tous les statuts</option>
-                  <option value="Public">Public (100% Gratuit)</option>
-                  <option value="PriveSousContrat">Privé sous contrat d'association</option>
-                  <option value="PriveHorsContrat">Privé hors contrat</option>
-                </select>
-              </div>
-
-              {/* Alternance */}
-              <div>
-                <label className="block text-slate-400 mb-1.5 font-semibold">Alternance</label>
-                <select
-                  value={selectedAlternance}
-                  onChange={(e) => setSelectedAlternance(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 transition-all font-medium"
-                >
-                  <option value="all">Alternance ou Initial</option>
-                  <option value="oui">Alternance proposée uniquement</option>
-                  <option value="non">Formation initiale uniquement</option>
-                </select>
-              </div>
-
-              {/* Tri */}
-              <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <label className="text-slate-400 font-semibold">Trier par</label>
-                  {(sortBy === 'parcoursup_demandes' || sortBy === 'parcoursup_selectivite') ? (
                     <a
                       href={PARCOURSUP_SOURCE_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[11px] text-cyan-400 hover:text-cyan-300 hover:underline inline-flex items-center gap-1 font-semibold"
-                      title="Consulter les données officielles Parcoursup Open Data (nouvel onglet)"
+                      className="px-3.5 py-2 rounded-full text-xs font-medium glass-pill text-sky-200 hover:text-white hover:bg-white/10 transition-all inline-flex items-center gap-1.5"
                     >
+                      <TrendingUp className="w-3.5 h-3.5 text-sky-300" />
                       <span>Open Data Parcoursup</span>
-                      <ExternalLink className="w-2.5 h-2.5" />
+                      <ExternalLink className="w-3 h-3 opacity-70" />
                     </a>
-                  ) : sortBy === 'thotis' ? (
-                    <a
-                      href={THOTIS_SOURCE_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[11px] text-amber-400 hover:text-amber-300 hover:underline inline-flex items-center gap-1 font-semibold"
-                      title="Consulter le classement officiel sur Thotis Media (nouvel onglet)"
-                    >
-                      <span>Source Thotis</span>
-                      <ExternalLink className="w-2.5 h-2.5" />
-                    </a>
-                  ) : null}
+                  </div>
                 </div>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 transition-all font-medium"
-                >
-                  <option value="parcoursup_demandes">📈 Vœux Parcoursup (Nombre de demandes)</option>
-                  <option value="parcoursup_selectivite">🔥 Taux d'accès (Plus sélectif)</option>
-                  <option value="reussite">🎓 Taux de réussite au diplôme (%)</option>
-                  <option value="avis">★ Note des avis étudiants</option>
-                  <option value="nom">🔤 Nom de l'école (A-Z)</option>
-                  <option value="thotis">🏆 Classement Thotis Media</option>
-                </select>
-              </div>
 
-            </div>
-
-            {/* Active Filters Badges Chips */}
-            {hasActiveFilters && (
-              <div className="pt-2 flex flex-wrap items-center gap-2 border-t border-slate-800/60">
-                <span className="text-[11px] text-slate-400 font-semibold">Filtres actifs :</span>
-                {selectedAcademy !== 'all' && (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                    Académie : {selectedAcademy}
-                    <button onClick={() => setSelectedAcademy('all')} className="hover:text-white">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-                {selectedType !== 'all' && (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-teal-500/15 text-teal-300 border border-teal-500/30">
-                    Statut : {selectedType}
-                    <button onClick={() => setSelectedType('all')} className="hover:text-white">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-                {selectedAlternance !== 'all' && (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
-                    Alternance : {selectedAlternance === 'oui' ? 'Oui' : 'Non'}
-                    <button onClick={() => setSelectedAlternance('all')} className="hover:text-white">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-                {minSuccessRate > 0 && (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                    Réussite &gt;= {minSuccessRate}%
-                    <button onClick={() => setMinSuccessRate(0)} className="hover:text-white">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-                {searchQuery.trim() && (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-200 border border-slate-700">
-                    Recherche : "{searchQuery}"
-                    <button onClick={() => setSearchQuery('')} className="hover:text-white">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
+                <StatsBanner
+                  totalSchools={totalSchools}
+                  publicCount={publicCount}
+                  privateCount={privateCount}
+                  averagePassRate={averagePassRate}
+                />
               </div>
             )}
-          </div>
 
-          {/* ========================================================= */}
-          {/* DISPLAY CONTENT: CARDS ("Gros boutons") vs TABLE */}
-          {/* ========================================================= */}
-          {filteredSchools.length === 0 ? (
-            <div className="bg-[#080d1a]/80 backdrop-blur-xl rounded-3xl p-12 text-center border border-slate-800 space-y-4">
-              <School className="w-12 h-12 text-slate-600 mx-auto" />
-              <h3 className="text-lg font-bold text-white font-heading">Aucune école ne correspond à vos filtres</h3>
-              <p className="text-xs text-slate-400 max-w-md mx-auto">
-                Essayez d'élargir votre sélection d'académie ou de réinitialiser vos critères de recherche.
-              </p>
-              <button
-                onClick={handleResetFilters}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/20"
-              >
-                Réinitialiser tous les filtres
-              </button>
-            </div>
-          ) : activeView === 'table' ? (
-            /* TABLE VIEW */
-            <SchoolsTable 
-              schools={filteredSchools}
-              onSelectSchool={(school) => setDetailSchool(school)}
-              onGenerateLetter={(school) => setLetterSchool(school)}
-              favorites={favorites}
-              onToggleFavorite={toggleFavorite}
-            />
-          ) : (
-            /* CARDS VIEW ("Gros boutons avec en fond l'école ciblée") */
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredSchools.map(school => (
-                <SchoolCard 
-                  key={school.id}
-                  school={school}
-                  onSelectSchool={(s) => setDetailSchool(s)}
-                  onGenerateLetter={(s) => setLetterSchool(s)}
-                  isFavorite={favorites.includes(school.id)}
+            {/* ============================================================= */}
+            {/* CARTE & GLOBE 3D (Vue Accueil)                                */}
+            {/* ============================================================= */}
+            {activeView === 'home' && (
+              <section className="space-y-4">
+                <InteractiveMap
+                  schools={schools}
+                  onSelectSchool={(school) => setDetailSchool(school)}
+                  onSelectAcademy={handleSelectAcademyFromMap}
+                  selectedAcademy={selectedAcademy}
+                />
+              </section>
+            )}
+
+            {/* ============================================================= */}
+            {/* BARRE DE FILTRES GLASSY & LISTE DES ÉCOLES                    */}
+            {/* ============================================================= */}
+            <section className="space-y-6">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/[0.08]">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-2xl glass-pill text-emerald-300">
+                    <School className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      <h2 className="text-xl sm:text-2xl font-bold text-white">
+                        {selectedAcademy === 'all'
+                          ? 'Établissements BTS Professions Immobilières'
+                          : selectedAcademy === 'sud-ouest'
+                          ? 'Établissements du Grand Sud-Ouest'
+                          : `Académie de ${selectedAcademy}`}
+                      </h2>
+                      <span className="text-xs font-semibold glass-pill text-emerald-300 px-3 py-0.5 rounded-full">
+                        {filteredSchools.length} école{filteredSchools.length > 1 ? 's' : ''}
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-400 mt-0.5">
+                      Consultez chaque fiche détaillée, le bilan Parcoursup ou préparez votre entretien.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Sélecteur de vue épuré */}
+                <div className="flex items-center gap-1 p-1 rounded-2xl glass-subtle self-start sm:self-auto">
+                  <button
+                    onClick={() => setActiveView('cards')}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                      activeView === 'cards' || activeView === 'home'
+                        ? 'bg-white text-slate-950 shadow-sm'
+                        : 'text-slate-300 hover:text-white'
+                    }`}
+                  >
+                    <LayoutGrid className="w-3.5 h-3.5" />
+                    <span>Cartes</span>
+                  </button>
+
+                  <button
+                    onClick={() => setActiveView('table')}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                      activeView === 'table'
+                        ? 'bg-white text-slate-950 shadow-sm'
+                        : 'text-slate-300 hover:text-white'
+                    }`}
+                  >
+                    <TableIcon className="w-3.5 h-3.5" />
+                    <span>Tableau</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Panneau de filtres en verre dépoli */}
+              <div className="glass-surface p-5 sm:p-6 rounded-3xl space-y-4">
+                <div className="flex items-center justify-between text-xs font-semibold text-slate-300">
+                  <span className="flex items-center gap-2 text-slate-200">
+                    <SlidersHorizontal className="w-4 h-4 text-emerald-300" />
+                    <span>Affiner la sélection</span>
+                  </span>
+
+                  {hasActiveFilters && (
+                    <button
+                      onClick={handleResetFilters}
+                      className="flex items-center gap-1.5 text-xs text-slate-300 hover:text-white transition-colors glass-pill px-3 py-1 rounded-full cursor-pointer"
+                    >
+                      <RotateCcw className="w-3 h-3" />
+                      <span>Réinitialiser</span>
+                    </button>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-xs">
+                  <div>
+                    <label className="block text-slate-400 mb-1.5 font-medium">Académie / Région</label>
+                    <select
+                      value={selectedAcademy}
+                      onChange={(e) => setSelectedAcademy(e.target.value)}
+                      className="w-full glass-input rounded-xl px-3.5 py-2.5 text-white font-medium"
+                    >
+                      {ACADEMIES.map((a) => (
+                        <option key={a.id} value={a.id}>
+                          {a.nom}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-400 mb-1.5 font-medium">Statut</label>
+                    <select
+                      value={selectedType}
+                      onChange={(e) => setSelectedType(e.target.value)}
+                      className="w-full glass-input rounded-xl px-3.5 py-2.5 text-white font-medium"
+                    >
+                      <option value="all">Tous les statuts</option>
+                      <option value="Public">Public (Gratuit)</option>
+                      <option value="PriveSousContrat">Privé sous contrat</option>
+                      <option value="PriveHorsContrat">Privé hors contrat</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-slate-400 mb-1.5 font-medium">Modalité</label>
+                    <select
+                      value={selectedAlternance}
+                      onChange={(e) => setSelectedAlternance(e.target.value)}
+                      className="w-full glass-input rounded-xl px-3.5 py-2.5 text-white font-medium"
+                    >
+                      <option value="all">Alternance ou Initial</option>
+                      <option value="oui">Alternance disponible</option>
+                      <option value="non">Initiale uniquement</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <label className="text-slate-400 font-medium">Trier par</label>
+                      {sortBy === 'parcoursup_demandes' || sortBy === 'parcoursup_selectivite' ? (
+                        <a
+                          href={PARCOURSUP_SOURCE_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] text-sky-300 hover:underline inline-flex items-center gap-1"
+                        >
+                          <span>Source MESR</span>
+                          <ExternalLink className="w-2.5 h-2.5" />
+                        </a>
+                      ) : sortBy === 'thotis' ? (
+                        <a
+                          href={THOTIS_SOURCE_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] text-amber-300 hover:underline inline-flex items-center gap-1"
+                        >
+                          <span>Source Thotis</span>
+                          <ExternalLink className="w-2.5 h-2.5" />
+                        </a>
+                      ) : null}
+                    </div>
+                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="w-full glass-input rounded-xl px-3.5 py-2.5 text-white font-medium"
+                    >
+                      <option value="parcoursup_demandes">Vœux Parcoursup (Demandes)</option>
+                      <option value="parcoursup_selectivite">Sélectivité (Taux d'accès)</option>
+                      <option value="reussite">Taux de réussite (%)</option>
+                      <option value="avis">Note des avis étudiants</option>
+                      <option value="nom">Ordre alphabétique (A-Z)</option>
+                      <option value="thotis">Classement Thotis Media</option>
+                    </select>
+                  </div>
+                </div>
+
+                {hasActiveFilters && (
+                  <div className="pt-3 flex flex-wrap items-center gap-2 border-t border-white/[0.07]">
+                    <span className="text-[11px] text-slate-400">Actifs :</span>
+                    {selectedAcademy !== 'all' && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs glass-pill text-emerald-200">
+                        {selectedAcademy}
+                        <button onClick={() => setSelectedAcademy('all')} className="hover:text-white">
+                          <X className="w-3 h-3" />
+                        </button>
+                      </span>
+                    )}
+                    {selectedType !== 'all' && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs glass-pill text-slate-200">
+                        {selectedType}
+                        <button onClick={() => setSelectedType('all')} className="hover:text-white">
+                          <X className="w-3 h-3" />
+                        </button>
+                      </span>
+                    )}
+                    {selectedAlternance !== 'all' && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs glass-pill text-slate-200">
+                        Alternance : {selectedAlternance === 'oui' ? 'Oui' : 'Non'}
+                        <button onClick={() => setSelectedAlternance('all')} className="hover:text-white">
+                          <X className="w-3 h-3" />
+                        </button>
+                      </span>
+                    )}
+                    {minSuccessRate > 0 && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs glass-pill text-slate-200">
+                        Réussite &ge; {minSuccessRate}%
+                        <button onClick={() => setMinSuccessRate(0)} className="hover:text-white">
+                          <X className="w-3 h-3" />
+                        </button>
+                      </span>
+                    )}
+                    {searchQuery.trim() && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs glass-pill text-slate-200">
+                        « {searchQuery} »
+                        <button onClick={() => setSearchQuery('')} className="hover:text-white">
+                          <X className="w-3 h-3" />
+                        </button>
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {/* Affichage des résultats */}
+              {filteredSchools.length === 0 ? (
+                <div className="glass-surface rounded-3xl p-12 text-center space-y-4">
+                  <School className="w-10 h-10 text-slate-500 mx-auto" />
+                  <h3 className="text-lg font-bold text-white">Aucune école ne correspond à vos critères</h3>
+                  <p className="text-xs text-slate-400 max-w-md mx-auto">
+                    Élargissez vos filtres ou réinitialisez la recherche pour afficher l'ensemble des 102 établissements.
+                  </p>
+                  <button
+                    onClick={handleResetFilters}
+                    className="px-5 py-2.5 rounded-full text-xs font-semibold bg-white text-slate-950 hover:bg-emerald-200 transition-colors"
+                  >
+                    Réinitialiser les filtres
+                  </button>
+                </div>
+              ) : activeView === 'table' ? (
+                <SchoolsTable
+                  schools={filteredSchools}
+                  onSelectSchool={(school) => setDetailSchool(school)}
+                  onGenerateLetter={(school) => setLetterSchool(school)}
+                  favorites={favorites}
                   onToggleFavorite={toggleFavorite}
                 />
-              ))}
-            </div>
-          )}
-
-        </section>
-
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filteredSchools.map((school) => (
+                    <SchoolCard
+                      key={school.id}
+                      school={school}
+                      onSelectSchool={(s) => setDetailSchool(s)}
+                      onGenerateLetter={(s) => setLetterSchool(s)}
+                      onOpenInterviewPrep={openInterviewPageForSchool}
+                      isFavorite={favorites.includes(school.id)}
+                      onToggleFavorite={toggleFavorite}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          </>
+        )}
       </main>
 
-      {/* Footer */}
-      <Footer 
+      {/* Pied de page */}
+      <Footer
         onOpenGuide={() => setIsGuideOpen(true)}
         setActiveView={setActiveView}
         onSelectAcademy={(acad) => {
@@ -586,43 +599,40 @@ export default function App() {
         }}
       />
 
-      {/* ========================================================= */}
-      {/* MODALS */}
-      {/* ========================================================= */}
-
-      {/* School Detail Modal */}
+      {/* Modals */}
       {detailSchool && (
-        <SchoolDetailModal 
+        <SchoolDetailModal
           school={detailSchool}
           onClose={() => setDetailSchool(null)}
           onGenerateLetter={(s) => {
             setDetailSchool(null);
             setLetterSchool(s);
           }}
+          onOpenInterviewPage={(s) => {
+            setDetailSchool(null);
+            openInterviewPageForSchool(s);
+          }}
           isFavorite={favorites.includes(detailSchool.id)}
           onToggleFavorite={toggleFavorite}
         />
       )}
 
-      {/* Cover Letter Generator Modal */}
       {letterSchool && (
-        <CoverLetterModal 
+        <CoverLetterModal
           school={letterSchool}
           onClose={() => setLetterSchool(null)}
         />
       )}
 
-      {/* Add School Modal */}
       {isAddSchoolOpen && (
-        <AddSchoolModal 
+        <AddSchoolModal
           onClose={() => setIsAddSchoolOpen(false)}
           onAddSchool={handleAddSchool}
         />
       )}
 
-      {/* Favorites Modal */}
       {isFavoritesOpen && (
-        <FavoritesModal 
+        <FavoritesModal
           favorites={favorites}
           schools={schools}
           onClose={() => setIsFavoritesOpen(false)}
@@ -633,13 +643,11 @@ export default function App() {
         />
       )}
 
-      {/* BTS PI Guide Modal */}
       {isGuideOpen && (
-        <BtsPiGuideModal 
+        <BtsPiGuideModal
           onClose={() => setIsGuideOpen(false)}
         />
       )}
-
     </div>
   );
 }

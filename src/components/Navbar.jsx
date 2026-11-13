@@ -1,161 +1,150 @@
 import React, { useState } from 'react';
-import { Building2, MapPin, School, FileText, Bookmark, PlusCircle, Search, Sparkles, BookOpen } from 'lucide-react';
+import {
+  Building2,
+  MapPin,
+  School,
+  FileText,
+  Bookmark,
+  PlusCircle,
+  Search,
+  BookOpen,
+  MessageSquare
+} from 'lucide-react';
 
-export function Navbar({ 
-  activeView, 
-  setActiveView, 
-  favoritesCount, 
-  onOpenFavorites, 
+export function Navbar({
+  activeView,
+  setActiveView,
+  favoritesCount,
+  onOpenFavorites,
   onOpenAddSchool,
   onOpenGuide,
   searchQuery,
   setSearchQuery,
-  selectedAcademy,
   onSelectAcademy
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const navItems = [
+    { id: 'home', label: 'Carte', icon: MapPin },
+    { id: 'cards', label: 'Écoles', icon: School },
+    { id: 'table', label: 'Comparateur', icon: FileText },
+    { id: 'interview', label: 'Mon Entretien', icon: MessageSquare, highlight: true }
+  ];
+
   return (
-    <header className="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
-      {/* Top subtle highlight line */}
-      <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-emerald-500/80 to-transparent" />
-      
+    <header className="sticky top-0 z-40 w-full glass-panel">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          
-          {/* Logo & Brand */}
-          <div 
-            onClick={() => { setActiveView('home'); onSelectAcademy('all'); }}
-            className="flex items-center gap-3 cursor-pointer group select-none"
+        <div className="flex items-center justify-between h-18 gap-4">
+          {/* Logo épuré */}
+          <div
+            onClick={() => {
+              setActiveView('home');
+              onSelectAcademy('all');
+            }}
+            className="flex items-center gap-3 cursor-pointer group select-none shrink-0"
           >
-            <div className="relative">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-400 flex items-center justify-center shadow-lg shadow-emerald-500/25 group-hover:scale-105 group-hover:shadow-emerald-500/40 transition-all duration-300">
-                <Building2 className="w-6 h-6 text-slate-950" />
-              </div>
-              <span className="absolute -bottom-0.5 -right-0.5 flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 border-2 border-slate-950"></span>
-              </span>
+            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-400/90 to-teal-300/90 flex items-center justify-center shadow-lg shadow-emerald-500/15 group-hover:scale-105 transition-transform duration-300">
+              <Building2 className="w-5 h-5 text-slate-950" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-extrabold text-xl tracking-tight text-white group-hover:text-emerald-400 transition-colors">
-                  BTS PI <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">France</span>
+                <span className="font-bold text-lg tracking-tight text-white">
+                  BTS PI <span className="text-emerald-300 font-semibold">France</span>
                 </span>
-                <span className="text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                  Open Data 2026
+                <span className="hidden xl:inline-flex text-[10px] font-medium px-2 py-0.5 rounded-full bg-white/[0.06] text-slate-300 border border-white/[0.1]">
+                  2026
                 </span>
               </div>
-              <p className="text-xs text-slate-400 hidden sm:block">
-                Comparateur national des écoles de BTS Professions Immobilières
+              <p className="text-[11px] text-slate-400 hidden sm:block">
+                Annuaire & Orientation Immobilière
               </p>
             </div>
           </div>
 
-          {/* Search bar quick access */}
-          <div className="hidden md:flex items-center flex-1 max-w-xs mx-6">
+          {/* Barre de recherche translucide */}
+          <div className="hidden md:flex items-center flex-1 max-w-xs">
             <div className="relative w-full group">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-emerald-400 transition-colors" />
+              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-emerald-300 transition-colors" />
               <input
                 type="text"
-                placeholder="Rechercher école, ville, CP..."
+                placeholder="École, ville, académie..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-900/90 text-sm text-slate-200 placeholder-slate-500 pl-9 pr-14 py-2 rounded-xl border border-slate-700/60 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+                className="w-full glass-input text-xs text-slate-100 placeholder-slate-400 pl-9 pr-8 py-2 rounded-2xl"
               />
-              {searchQuery ? (
-                <button 
+              {searchQuery && (
+                <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-200 w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white w-5 h-5 rounded-full bg-white/10 flex items-center justify-center"
                 >
                   ✕
                 </button>
-              ) : (
-                <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-mono text-slate-500 bg-slate-800/80 px-1.5 py-0.5 rounded border border-slate-700/50 pointer-events-none">
-                  /
-                </span>
               )}
             </div>
           </div>
 
-          {/* Navigation Items (Segmented Pills) */}
-          <div className="hidden lg:flex items-center bg-slate-900/70 p-1.5 rounded-2xl border border-slate-800/80 backdrop-blur-md">
-            <button
-              onClick={() => setActiveView('home')}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                activeView === 'home'
-                  ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/25'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
-              }`}
-            >
-              <MapPin className="w-3.5 h-3.5" />
-              Carte & Académies
-            </button>
-
-            <button
-              onClick={() => setActiveView('cards')}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                activeView === 'cards'
-                  ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/25'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
-              }`}
-            >
-              <School className="w-3.5 h-3.5" />
-              Grandes Fiches
-            </button>
-
-            <button
-              onClick={() => setActiveView('table')}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
-                activeView === 'table'
-                  ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/25'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
-              }`}
-            >
-              <FileText className="w-3.5 h-3.5" />
-              Tableau comparatif
-            </button>
+          {/* Navigation principale en capsule glassy */}
+          <nav className="hidden lg:flex items-center p-1 rounded-2xl bg-white/[0.04] border border-white/[0.09] backdrop-blur-xl">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeView === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveView(item.id)}
+                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                    isActive
+                      ? 'bg-white text-slate-950 shadow-sm'
+                      : item.highlight
+                      ? 'text-emerald-300 hover:text-white hover:bg-white/[0.06]'
+                      : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
 
             <button
               onClick={onOpenGuide}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-300 hover:text-white hover:bg-white/[0.06] transition-all cursor-pointer"
             >
-              <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
-              Guide BTS PI
+              <BookOpen className="w-3.5 h-3.5 text-slate-400" />
+              <span>Guide</span>
             </button>
-          </div>
+          </nav>
 
-          {/* Action CTAs */}
-          <div className="flex items-center gap-2.5">
-            {/* Bookmarks */}
+          {/* Actions droites épurées */}
+          <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={onOpenFavorites}
-              className="relative p-2.5 rounded-xl text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/60 transition-all hover:scale-105 active:scale-95"
+              className="relative p-2.5 rounded-2xl glass-pill text-slate-200 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
               title="Mes écoles favorites"
             >
-              <Bookmark className="w-5 h-5" />
+              <Bookmark className="w-4 h-4" />
               {favoritesCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-gradient-to-tr from-emerald-500 to-teal-400 text-slate-950 font-black text-[11px] w-5 h-5 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30 animate-scale-in">
+                <span className="absolute -top-1 -right-1 bg-emerald-400 text-slate-950 font-bold text-[10px] w-4.5 h-4.5 rounded-full flex items-center justify-center">
                   {favoritesCount}
                 </span>
               )}
             </button>
 
-            {/* Proposer une école */}
             <button
               onClick={onOpenAddSchool}
-              className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500/50 shadow-sm transition-all hover:scale-105 active:scale-95"
+              className="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-2xl text-xs font-semibold glass-pill text-slate-200 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
             >
-              <PlusCircle className="w-4 h-4 text-emerald-400" />
-              Ajouter une école
+              <PlusCircle className="w-3.5 h-3.5 text-emerald-300" />
+              <span>Ajouter</span>
             </button>
 
-            {/* Mobile Hamburger toggle */}
+            {/* Menu Mobile */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800"
+              className="lg:hidden p-2 rounded-xl glass-pill text-slate-300 hover:text-white"
+              aria-label="Menu"
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {mobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -167,58 +156,93 @@ export function Navbar({
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Tiroir Mobile Glassy */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-3 pb-6 space-y-3">
-          <div className="mb-3">
+        <div className="lg:hidden border-t border-white/[0.08] bg-[#080d1a]/90 backdrop-blur-2xl px-4 pt-3 pb-5 space-y-2">
+          <div className="mb-2">
             <input
               type="text"
               placeholder="Rechercher une école, ville..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-900 text-sm text-slate-200 placeholder-slate-500 px-3 py-2 rounded-lg border border-slate-700"
+              className="w-full glass-input text-sm text-slate-100 placeholder-slate-400 px-3.5 py-2 rounded-xl"
             />
           </div>
+
           <button
-            onClick={() => { setActiveView('home'); setMobileMenuOpen(false); }}
-            className={`w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium ${
-              activeView === 'home' ? 'bg-emerald-500/20 text-emerald-400' : 'text-slate-300'
+            onClick={() => {
+              setActiveView('home');
+              setMobileMenuOpen(false);
+            }}
+            className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium ${
+              activeView === 'home' ? 'bg-white text-slate-950 font-semibold' : 'text-slate-200 hover:bg-white/5'
             }`}
           >
             <MapPin className="w-4 h-4" />
-            Carte Interactive & Académies
+            <span>Carte & Globe 3D</span>
           </button>
+
           <button
-            onClick={() => { setActiveView('cards'); setMobileMenuOpen(false); }}
-            className={`w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium ${
-              activeView === 'cards' ? 'bg-emerald-500/20 text-emerald-400' : 'text-slate-300'
+            onClick={() => {
+              setActiveView('cards');
+              setMobileMenuOpen(false);
+            }}
+            className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium ${
+              activeView === 'cards' ? 'bg-white text-slate-950 font-semibold' : 'text-slate-200 hover:bg-white/5'
             }`}
           >
             <School className="w-4 h-4" />
-            Toutes les Écoles (Grandes Vues)
+            <span>Toutes les écoles</span>
           </button>
+
           <button
-            onClick={() => { setActiveView('table'); setMobileMenuOpen(false); }}
-            className={`w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium ${
-              activeView === 'table' ? 'bg-emerald-500/20 text-emerald-400' : 'text-slate-300'
+            onClick={() => {
+              setActiveView('table');
+              setMobileMenuOpen(false);
+            }}
+            className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium ${
+              activeView === 'table' ? 'bg-white text-slate-950 font-semibold' : 'text-slate-200 hover:bg-white/5'
             }`}
           >
             <FileText className="w-4 h-4" />
-            Tableau Comparatif & Filtres
+            <span>Tableau comparatif</span>
           </button>
+
           <button
-            onClick={() => { onOpenGuide(); setMobileMenuOpen(false); }}
-            className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-300"
+            onClick={() => {
+              setActiveView('interview');
+              setMobileMenuOpen(false);
+            }}
+            className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium ${
+              activeView === 'interview'
+                ? 'bg-emerald-400 text-slate-950 font-semibold'
+                : 'text-emerald-300 bg-emerald-400/10 border border-emerald-400/20'
+            }`}
           >
-            <BookOpen className="w-4 h-4 text-emerald-400" />
-            Guide du BTS PI (Métiers & Débouchés)
+            <MessageSquare className="w-4 h-4" />
+            <span>Préparation de mon entretien école (PDF)</span>
           </button>
+
           <button
-            onClick={() => { onOpenAddSchool(); setMobileMenuOpen(false); }}
-            className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-sm font-semibold bg-emerald-500 text-slate-950"
+            onClick={() => {
+              onOpenGuide();
+              setMobileMenuOpen(false);
+            }}
+            className="w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-white/5"
           >
-            <PlusCircle className="w-4 h-4" />
-            Ajouter une école
+            <BookOpen className="w-4 h-4 text-slate-400" />
+            <span>Guide du BTS PI</span>
+          </button>
+
+          <button
+            onClick={() => {
+              onOpenAddSchool();
+              setMobileMenuOpen(false);
+            }}
+            className="w-full flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl text-sm font-semibold glass-pill text-white mt-2"
+          >
+            <PlusCircle className="w-4 h-4 text-emerald-300" />
+            <span>Ajouter une école</span>
           </button>
         </div>
       )}

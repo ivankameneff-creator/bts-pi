@@ -259,25 +259,25 @@ export function InteractiveMap({
         </div>
 
         {/* View Toggle: Globe 3D Google Earth vs Plan 2D */}
-        <div className="flex items-center gap-1 bg-[#080d1a]/95 backdrop-blur-xl p-1 rounded-2xl border border-slate-800 shadow-xl self-start sm:self-auto">
+        <div className="flex items-center gap-1 glass-subtle p-1 rounded-2xl self-start sm:self-auto">
           <button
             onClick={() => setDisplayMode('globe')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
               displayMode === 'globe'
-                ? 'bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 shadow-md shadow-emerald-500/20'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/80'
+                ? 'bg-white text-slate-950 shadow-sm'
+                : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
             }`}
           >
             <Globe className="w-3.5 h-3.5" />
-            <span>Globe 3D Earth</span>
+            <span>Globe 3D</span>
           </button>
           
           <button
             onClick={() => setDisplayMode('2d')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
               displayMode === '2d'
-                ? 'bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 shadow-md shadow-emerald-500/20'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/80'
+                ? 'bg-white text-slate-950 shadow-sm'
+                : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
             }`}
           >
             <MapIcon className="w-3.5 h-3.5" />
@@ -294,15 +294,15 @@ export function InteractiveMap({
             <button
               key={acad.id}
               onClick={() => onSelectAcademy(acad.id)}
-              className={`shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-200 ${
+              className={`shrink-0 flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${
                 isSelected
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 shadow-lg shadow-emerald-500/25 scale-105'
-                  : 'bg-slate-900/90 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800'
+                  ? 'bg-white text-slate-950 font-semibold shadow-sm'
+                  : 'glass-pill text-slate-300 hover:text-white hover:bg-white/10'
               }`}
             >
               <span>{acad.nom}</span>
-              <span className={`px-1.5 py-0.5 rounded-md text-[10px] font-black ${
-                isSelected ? 'bg-slate-950/20 text-slate-950' : 'bg-slate-800 text-slate-400'
+              <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-semibold ${
+                isSelected ? 'bg-slate-950/15 text-slate-950' : 'bg-white/10 text-slate-300'
               }`}>
                 {acad.id === 'all' ? schools.length : schools.filter(s => s.academie === acad.id).length}
               </span>

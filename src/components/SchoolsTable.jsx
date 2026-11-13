@@ -88,10 +88,10 @@ export function SchoolsTable({
   };
 
   return (
-    <div className="w-full overflow-hidden rounded-3xl border border-slate-800/90 bg-[#080d1a]/90 backdrop-blur-xl shadow-2xl ring-1 ring-white/5">
+    <div className="w-full overflow-hidden rounded-3xl glass-surface">
       <div className="overflow-x-auto scrollbar-thin">
         <table className="w-full text-left text-sm text-slate-300">
-          <thead className="bg-slate-950/95 text-xs uppercase tracking-wider text-slate-400 border-b border-slate-800 font-bold select-none sticky top-0 z-20">
+          <thead className="bg-white/[0.03] backdrop-blur-md text-xs uppercase tracking-wider text-slate-400 border-b border-white/[0.08] font-semibold select-none sticky top-0 z-20">
             <tr>
               <th className="py-4 px-4 w-12 text-center">Fav</th>
               <th 

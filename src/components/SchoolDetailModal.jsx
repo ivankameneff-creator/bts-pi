@@ -33,7 +33,8 @@ import { InterviewPrepModal } from './InterviewPrepModal';
 export function SchoolDetailModal({ 
   school, 
   onClose, 
-  onGenerateLetter, 
+  onGenerateLetter,
+  onOpenInterviewPage,
   isFavorite, 
   onToggleFavorite 
 }) {
@@ -79,7 +80,7 @@ END:VCALENDAR`;
       
       {/* Modal Dialog Card */}
       <div 
-        className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col"
+        className="relative w-full max-w-4xl glass-surface bg-[#0a1020]/92 rounded-3xl overflow-hidden my-auto max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Hero Header with Background Banner */}
@@ -630,6 +631,15 @@ END:VCALENDAR`;
         <InterviewPrepModal
           school={school}
           onClose={() => setIsInterviewModalOpen(false)}
+          onOpenFullPage={
+            onOpenInterviewPage
+              ? (s) => {
+                  setIsInterviewModalOpen(false);
+                  onClose();
+                  onOpenInterviewPage(s);
+                }
+              : undefined
+          }
         />
       )}
     </div>

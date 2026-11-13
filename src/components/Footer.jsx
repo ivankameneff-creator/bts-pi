@@ -4,7 +4,7 @@ import { PARCOURSUP_SOURCE_URL, THOTIS_SOURCE_URL } from '../data/schoolsData';
 
 export function Footer({ onOpenGuide, setActiveView, onSelectAcademy }) {
   return (
-    <footer className="mt-20 border-t border-slate-800/80 bg-slate-950/90 text-slate-400 text-xs py-12">
+    <footer className="mt-20 border-t border-white/[0.08] bg-white/[0.015] backdrop-blur-2xl text-slate-400 text-xs py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -50,6 +50,14 @@ export function Footer({ onOpenGuide, setActiveView, onSelectAcademy }) {
                   className="hover:text-emerald-400 transition-colors"
                 >
                   Tableau comparatif & filtres
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => { setActiveView('interview'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  className="hover:text-emerald-300 transition-colors text-emerald-300/90 font-medium"
+                >
+                  Préparation de mon entretien école (PDF)
                 </button>
               </li>
               <li>
